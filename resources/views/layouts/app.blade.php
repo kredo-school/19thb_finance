@@ -18,18 +18,23 @@
 
     <!-- Other Files -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-
-<header class="color-background">
-    @include('components.header')
-</header>
     
 <body>
-    <div id="app">
+<header class="color-background" style="height: 80px;">
+    @include('components.header')
+</header>
+
+    <div id="app" style="min-height: calc(100vh - 160px);">
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+<footer class="footer bg-color-Letter">
+    @include('components.footer')
+</footer>
 </body>
+
 </html>

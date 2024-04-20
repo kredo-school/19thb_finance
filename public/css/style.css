@@ -18,7 +18,7 @@
     font: #343A40;
 }
 .color-Muted{
-    background-color: #D9D9D9;
+    color: #D9D9D9;
 }
 
 /* bg color */
@@ -68,49 +68,84 @@
     height: 100%;
     min-height: 100%;
     padding: 0;;
-  }
-  .fullscreen .modal-content {
-    height: 100%;
-    min-height: 100%;
-    border-radius: 0;
-    overflow:auto;
-  }
-  .fullscreen .modal-content .modal-header{
-    border: 0px;
-  }
-  .fullscreen .modal-content button{
-    opacity: 1;
-  }
-  .fullscreen .modal-content button span{
-    color: #fff;
-    font-weight: 1;
-    font-size: 26px;
-    text-shadow: none;
-  }
-  .fullscreen .modal-body .modal-logo img {
-    width: 158px;
-    padding-bottom: 84px;
-  }
-  .fullscreen .modal-body ul {
-    margin-top: 50px;
-    padding: 0 0 0 0;
-  }
-  .fullscreen .modal-body li {
-    padding-bottom: 43px;
-  }
-  .fullscreen .modal-body a {
-    color: #fff;
-  }
-  .fullscreen .modal-body .social img {
-    width: 56px;
-    margin: 8px;
-  }
-  .modal-title{
-    color: #fff;
-  }
+}
+.fullscreen .modal-content {
+  height: 100%;
+  min-height: 100%;
+  border-radius: 0;
+  overflow:auto;
+}
+.fullscreen .modal-content .modal-header{
+  border: 0px;
+}
+.fullscreen .modal-content button{
+  opacity: 1;
+}
+.fullscreen .modal-content button span{
+  color: #fff;
+  font-weight: 1;
+  font-size: 26px;
+  text-shadow: none;
+}
+.fullscreen .modal-body .modal-logo img {
+  width: 158px;
+  padding-bottom: 84px;
+}
+.fullscreen .modal-body ul {
+  margin-top: 50px;
+  padding: 0 0 0 0;
+}
+.fullscreen .modal-body li {
+  padding-bottom: 43px;
+}
+.fullscreen .modal-body a {
+  color: #fff;
+}
+.fullscreen .modal-body .social img {
+  width: 56px;
+  margin: 8px;
+}
+.modal-title{
+  color: #fff;
+}
+
+footer{
+  height: 80px;
+}
 
 @media (min-width: 992px) {
 .bg-color-Rainbow .navbar-expand-lg .navbar-toggler {
     display: block;
 }
+
+.navbar-expand-lg {
+  justify-content: flex-end;
+}
+}
+
+@media (max-width: 768px) {  
+  /* footer */
+  footer{
+    height: auto;
+  }
+  footer .row{
+    padding-bottom: 3rem;
+  }
+  .footer-logo{
+    padding-top: 1rem;
+  }
+  .footer-nav .mt-4{
+    margin-top: 1rem !important;
+  }
+  .footer-nav li{
+    margin-top: 0.5rem;
+  }
+  .footer-sns{
+    margin-top: 1rem;
+  }
+  .footer-sns .d-block{
+    display: inline !important;
+    margin: 0 1rem;
+  }
+
 }

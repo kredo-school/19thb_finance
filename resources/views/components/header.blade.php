@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg">
 
             <!-- logo -->
-            <a href="navbar-brand" href="#" style="max-width: 200px;">
+            <a class="navbar-brand" href="#" style="max-width: 200px;">
                 <img src="images/pig-logo.png" alt="" class="img-fluid">
             </a>
             
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="#">FAQ</a>
                     </li>
                 </ul>
-                <a href="" class="btn btn-sub border btn-lg rounded rounded-pill color3 px-5 me-0">
+                <a href="" class="btn btn-sub border btn-lg rounded-pill color3 px-5 me-0">
                     <span class="h4">inquiry</span>
                 </a>
             </div>
