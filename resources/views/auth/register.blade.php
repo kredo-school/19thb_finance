@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
-    <img src="images/bg_img_signin_register.jpg" alt="bg_img_signin_register" class="w-100" style="height: 150px;">
+    <img src="images/bg_img_signin_register.jpg" alt="bg_img_signin_register" class="w-100" style="height: 140px;">
 
     <p class="h2 fw-bold position-absolute top-50 start-50 translate-middle">Welcome to Money-Juu</p>
 </div>
@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative" >
             <div class="row">
-                <h2 class="h3 text-center border border-3 rounded-3 py-1" style="width: 150px;">{{ __('Register') }}</h2>
+                <h2 class="h3 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Register') }}</h2>
             </div>
 
             <div class="row position-absolute bottom-0 end-0">
@@ -25,8 +25,8 @@
         </div> --}}
 
         <div class="col-md-auto d-flex align-items-stretch">
-            <div class="card p-0">
-                <div class="card-body border border-3 px-5 py-3" style="width: 500px;">
+            <div class="card mx-3 p-0">
+                <div class="card-body border border-3 px-5 py-3" style="max-width: 500px;">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -92,9 +92,9 @@
                                     {{ __('I already have an account') }}
                                 </a>
     
-                                {{-- <a class="btn btn-link text-decoration-none text-md-start d-inline" href="#">
+                                <a class="btn btn-link text-decoration-none text-md-start d-inline" href="#">
                                     {{ __('Privacy & Terms') }}
-                                </a> --}}
+                                </a>
                             </div>
                         </div>
                     </form>
