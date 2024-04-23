@@ -9,11 +9,11 @@
     <p class="h2 fw-bold position-absolute top-50 start-50 translate-middle">Welcome to Money-Juu</p>
 </div>
 
-<div class="container my-4">
+<div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative" >
             <div class="row">
-                <h2 class="h3 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Register') }}</h2>
+                <h2 class="h4 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Register') }}</h2>
             </div>
 
             <div class="row position-absolute bottom-0 end-0">
