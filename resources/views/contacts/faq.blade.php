@@ -1,28 +1,33 @@
 @extends('layouts.app')
 
-@section('title', "Sign-in")
+@section('title', "FAQ")
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
     <img src="images/bg_img_signin_register.jpg" alt="bg_img_signin_register" class="w-100" style="height: 140px;">
 
-    <p class="h2 fw-bold position-absolute top-50 start-50 translate-middle">Welcome to Money-Juu</p>
+    <p class="h2 fw-bold position-absolute top-50 start-50 translate-middle">FAQ</p>
 </div>
 
-<div class="container py-4">
+<div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row">
-                <h2 class="h4 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Sign In') }}</h2>
+                <h2 class="h5 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('About Us') }}</h2>
+            </div>
+
+            <div class="row">
+                <h2 class="h5 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('FAQ') }}</h2>
+            </div>
+
+            <div class="row">
+                <h2 class="h5 text-center border border-3 rounded-3 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Inquiry Form') }}</h2>
             </div>
 
             <div class="row position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>
-        {{-- <div class="row d-flex align-self-end">
-            <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75 img-fluid float-end" style="max-width: 150px">
-        </div> --}}
         
         <div class="col-md-auto d-flex align-items-stretch">
             <div class="card mx-3 p-0">
