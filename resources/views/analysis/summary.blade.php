@@ -1,8 +1,6 @@
 @extends('layouts.app')
     
 @section('content')
-
-
     <div class="container">
         <h2 class="h1 text-center fw-bold my-3">2024 Mar</h2>
 
@@ -30,23 +28,24 @@
         </div>
 
         <div class="row mt-5">
-            <div class="col-4 p-4 me-5">
-                <div>
-                    <canvas id="expenseChart" width="600" height="400"></canvas>
+            <div class="col p-4 position-relative">
+                <div class="z-1 position-absolute top-50 start-50 translate-middle">
+                    <h3 class="h5 fw-bold text-secondary">Expense</h3>
+                    {{-- TODO: Total --}}
+                    <h4 class="fw-bold text-danger">¥7,923</h4>  
+                </div>
+                <div class="z-0 position-absolute top-50 start-50 translate-middle">
+                    <canvas id="expenseChart"></canvas>
                 </div>
             </div>
             <div class="col p-4">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="fw-bold">This Week</h3>
-                    </div>
-                    <div class="col text-end">
-                        <p class="h3" style="color: rgba(255, 99, 132, 1)">¥4,500</p>
-                    </div>                    
+                <div class="d-flex justify-content-between">
+                    <h3 class="fw-bold">This Week</h3>
+                    <p class="h3" style="color: rgba(255, 99, 132, 1)">¥4,500</p>                  
                 </div>
                 <div>
 
-                    <canvas id="weekChart" width="600" height="400"></canvas>
+                    <canvas id="weekChart"></canvas>
                 </div>
             </div>
         </div>

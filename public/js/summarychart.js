@@ -2,7 +2,7 @@ const ctxExpense = document.getElementById('expenseChart').getContext('2d');
 const expenseChart = new Chart(ctxExpense, {
     type: 'doughnut',
     data: {
-        labels: ["Meal", "House", "Child", "XXX", "XXX", "XXX"],
+        labels: ["House", "Meal", "Child", "XXX", "XXX", "XXX"],
         datasets: [{
             data: [480, 100, 280, 400, 320, 380],
             backgroundColor: [
@@ -31,7 +31,7 @@ const weekChart = new Chart(ctxWeek, {
         labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         datasets: [
             {
-                data: [500, 1500, 1000, 200, 0, 800, 500],
+                data: [500, 500, 500, 500, 500, 600, 600],
                 backgroundColor: [
                     "rgba(255, 99, 132, 1)",
                 ],
