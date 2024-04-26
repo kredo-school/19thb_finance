@@ -2,13 +2,18 @@
 
 @section('title', 'Premium')
 
+{{--
 <main class="py-4">
-    @yield('header')
+    @yield('components.header')
 </main>
+--}}
 
-<div class>
-    <img src="images/bubble_backscreen.png" alt="【premium】Easily manage your finances【money-juu】" class="img-fluid">
+@section('content')
+<div class="container-fluid position-relative m-0 p-0">
+    <img src="images/bubble_backscreen.png" alt="bg_img_premium" class="w-100" style="height: 140px;">
+    <p class="h2 text-warning fw-bold position-absolute top-50 start-50 translate-middle">premium</p>
 </div>
+
 
 <div class="col-md-4 d-flex align-items-stretch">
     <div class="card p-0">
@@ -94,6 +99,10 @@
     </div>
 </div>
 
+{{--
 <main class="py-4">
     @yield('footer')
 </main>
+--}}
+
+@endsection

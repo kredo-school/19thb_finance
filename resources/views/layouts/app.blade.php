@@ -30,6 +30,8 @@
     @include('components.header')
 </header>
 
+
+    <!-- Basic Body -->
 <body class="bg-color-Background">
     <div id="app" style="min-height: calc(100vh - 160px);">
         <main>
