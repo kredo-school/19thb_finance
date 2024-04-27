@@ -18,6 +18,10 @@ Route::get('/faq', function () {
     return view('contacts/faq');
 });
 
+Route::get('/privacyandterms', function () {
+    return view('privacyandterms');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
