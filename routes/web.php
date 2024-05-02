@@ -7,7 +7,15 @@ Route::get('/', function () {
 });
 
 Route::get('/faq', function () {
-    return view('contacts/faq');
+    return view('contacts.faq');
+});
+
+Route::get('/inquiry', function () {
+    return view('contacts.inquiry');
+});
+
+Route::get('/aboutUs', function () {
+    return view('contacts.aboutUs');
 });
 
 Auth::routes();
