@@ -30,7 +30,7 @@
         <div class="col-md-auto d-flex align-items-stretch position-relative">
             <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
                 <div class="row py-2">
-                    <h2 class="h4 text-center border border-3 rounded-3 mx-5 px-3 py-1" style="max-width: 200px;">Payment Info</h2>
+                    <h2 class="h4 fw-bold text-center rounded-3 mx-5 px-3 py-1 shadow p-3 mb-5" style="max-width: 200px;">Payment Info</h2>
                 </div>
 
                 <div class="row position-absolute end-0 px-4" style="bottom:0">
@@ -44,12 +44,12 @@
                     <div class="ms-3">
                         <div class="form-check">
                             <input type="radio" class="form-check-input" name="Radio" id="Radios1" value="option1" checked>
-                            <label for="exampleRadios1" class="form-check-label">Monthly Plan    <span>￥500 / Month</span></label>
+                            <label for="exampleRadios1" class="form-check-label">Monthly Plan <span>￥500 / Month</span></label>
                         </div>
 
                         <div class="form-check">
                             <input type="radio" class="form-check-input" name="Radio" id="Radios2" value="option2">
-                            <label for="Radios2" class="form-check-label">Annual Plan<span>￥5,000 / Year</span></label>
+                            <label for="Radios2" class="form-check-label">Annual Plan <span>￥5,000 / Year</span></label>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                     </div>
 
                     <div>
-                        <button type=button class="btn bg-color4 inner-button w-100 my-2 text-center" type="submit" href="#">Send</button>
+                        <button type=button class="btn bg-color4 text-white inner-button w-100 my-2 text-center" type="submit" href="#">Send</button>
                     </div>
                 </div>
             </div>
