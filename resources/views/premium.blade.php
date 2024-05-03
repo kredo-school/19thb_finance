@@ -12,7 +12,7 @@
 <div class="container-fluid position-relative m-0 p-0">
     {{-- position-relativeとabsoluteの関係性で文字が中に？ --}}
     <img src="images/bg_img_premium.jpg" alt="bg_img_premium" class="w-100" style="height: 140px;">
-    <p class="h2 text-warning fw-bold position-absolute top-50 start-50 translate-middle">premium</p>
+    <p id="premium-p" class="position-absolute top-50 start-50 translate-middle">premium</p>
 </div>
 
 <div class="container py-4">
@@ -38,7 +38,7 @@
             </div>
         </div>
             <div class="card">
-                <div class="card-body border border-3 px-5 py-4" style="width: 500px;">
+                <div class="card-body border border-3 px-5 py-4" style="width: 400px;">
                 <div class="form-box">
                     <p class="fs-5 fw-bold">Subscription Plan</p>
                     <div class="ms-3">
@@ -106,7 +106,7 @@
                     </div>
 
                     <div>
-                        <button class="btn btn-primary w-100 my-2 text-center" type="submit">Send</button>
+                        <button id="premium-btn" class="btn w-100 my-2 text-center" type="submit">Send</button>
                     </div>
                 </div>
             </div>
