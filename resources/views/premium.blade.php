@@ -28,15 +28,15 @@
         </div> --}}
 
         <div class="col-md-auto d-flex align-items-stretch position-relative">
-        <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
-            <div class="row py-2">
-                <h2 class="h4 text-center border border-3 rounded-3 mx-5 px-3 py-1" style="max-width: 200px;">Payment Info</h2>
-            </div>
+            <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
+                <div class="row py-2">
+                    <h2 class="h4 text-center border border-3 rounded-3 mx-5 px-3 py-1" style="max-width: 200px;">Payment Info</h2>
+                </div>
 
-            <div class="row position-absolute end-0 px-4" style="bottom:0">
-                <img src="images/pinky_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
+                <div class="row position-absolute end-0 px-4" style="bottom:0">
+                    <img src="images/pinky_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
+                </div>
             </div>
-        </div>
             <div class="card">
                 <div class="card-body border border-3 px-5 py-4" style="width: 400px;">
                 <div class="form-box">
@@ -106,7 +106,7 @@
                     </div>
 
                     <div>
-                        <button id="premium-btn" class="btn w-100 my-2 text-center" type="submit">Send</button>
+                        <button type=button class="btn bg-color4 inner-button w-100 my-2 text-center" type="submit" href="#">Send</button>
                     </div>
                 </div>
             </div>
