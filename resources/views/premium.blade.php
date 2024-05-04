@@ -2,31 +2,14 @@
 
 @section('title', 'Premium')
 
-{{--
-<main class="py-4">
-    @yield('components.header')
-</main>
---}}
-
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
-    {{-- position-relativeとabsoluteの関係性で文字が中に？ --}}
     <img src="images/bg_img_premium.jpg" alt="bg_img_premium" class="w-100" style="height: 140px;">
     <p id="premium-p" class="position-absolute top-50 start-50 translate-middle">premium</p>
 </div>
 
 <div class="container py-4">
     <div class="row justify-content-center ">
-       {{--  <div class="col-md-auto">
-            <div class="row py-2">
-                <h2 class="h4 text-center border border-3 rounded-3 mx-5 px-3 py-1" style="max-width: 200px;">Payment Info</h2>
-            </div>
-
-            <div class="row position-absolute bottom-0 end-0 px-4">
-                <img src="images/pinky_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
-            </div>
-        </div> --}}
-
         <div class="col-md-auto d-flex align-items-stretch position-relative">
             <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
                 <div class="row py-2">
@@ -113,11 +96,5 @@
         </div>
     </div>
 </div>
-
-{{--
-<main class="py-4">
-    @yield('footer')
-</main>
---}}
 
 @endsection
