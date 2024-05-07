@@ -16,7 +16,7 @@
 
                 <p class="h5 fw-bold color4" style="letter-spacing: .1rem;">Learn more on our website by signing in now.</p>
 
-                <div class="d-flex flex-row my-4" style="max-width: 800px;">
+                <div class="d-flex flex-row my-3" style="max-width: 800px;">
                     <div class="col-md-4">
                         @if (Route::has('login'))
                             @auth
@@ -54,7 +54,7 @@
                 <div class="container d-flex justify-content-start m-0 p-0">
                     <div class="row row-cols-1 row-cols-lg-4 row-cols-2">
                         <div class="col">
-                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                            <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/calendar-icon.png') }}" alt="calendar_icon" style="max-width: 30px;" class="py-2">
                                     <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Calendar</p>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                            <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/entry-icon.png') }}" alt="entry_icon" style="max-width: 30px;" class="py-2">
                                     <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Entry</p>
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                            <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/analysis-icon.png') }}" alt="analysis_icon" style="max-width: 30px;" class="py-2">
                                     <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Analysis</p>
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                            <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 25px;" class="py-2">
                                     <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p>
