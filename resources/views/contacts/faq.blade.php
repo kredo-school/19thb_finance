@@ -20,7 +20,7 @@
 </style> --}}
 
 <div class="container-fluid position-relative m-0 p-0">
-    <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="bg_img_signin_register" class="w-100" style="height: 140px;">
+    <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="background_FAQ" class="w-100" style="height: 140px;">
 
     <img src="images/balloon.png" alt="balloon" class="opacity-75 position-absolute top-50 end-0 translate-middle" style="height: 140px;">
     
@@ -51,83 +51,81 @@
         
         <div class="col-md-auto d-flex align-items-stretch">
             <div class="card border-0 mx-3 p-0 bg-color-Background">
-                <div class="accordion" id="accordionExample">
-                    <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
-                        <div class="row">
-                            <div class="col-md-1 d-flex align-items-center p-0">
-                                <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
-                                    <i class="fas fa-plus fa-xl color3"></i>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-11">
-                                <p class="fs-6 fw-bold mb-0">
-                                    Q: What devices do I need to use this app?
-                                </p>
+                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center p-0">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                                <i class="fas fa-plus fa-xl color3"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <p class="fs-6 fw-bold mb-0">
+                                Q: What devices do I need to use this app?
+                            </p>
 
-                                <div class="collapse show mt-2" id="collapseExample1">
-                                    This app is available for both desktop and mobile devices. It can be used on Windows, Mac, iOS, and Android devices.
-                                </div>
+                            <div class="collapse mt-2 show" id="collapseExample1">
+                                This app is available for both desktop and mobile devices. It can be used on Windows, Mac, iOS, and Android devices.
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
-                        <div class="row">
-                            <div class="col-md-1 d-flex align-items-center p-0">
-                                <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-                                    <i class="fas fa-plus fa-xl color3"></i>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-11">
-                                <p class="fs-6 fw-bold mb-0">
-                                    Q: How much does it cost to use the app?
-                                </p>
+                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center p-0">
+                            <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                                <i class="fas fa-plus fa-xl color3"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <p class="fs-6 fw-bold mb-0">
+                                Q: How much does it cost to use the app?
+                            </p>
 
-                                <div class="collapse mt-2" id="collapseExample2">
-                                    A: The app offers basic features for free. However, premium features or additional services may require a monthly or yearly subscription.
-                                </div>
+                            <div class="collapse mt-2" id="collapseExample2">
+                                A: The app offers basic features for free. However, premium features or additional services may require a monthly or yearly subscription.
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
-                        <div class="row">
-                            <div class="col-md-1 d-flex align-items-center p-0">
-                                <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-plus fa-xl color3"></i>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-11">
-                                <p class="fs-6 fw-bold mb-0">
-                                    Q: How do I set budgets and categorize expenses?
-                                </p>
+                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center p-0">
+                            <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                                <i class="fas fa-plus fa-xl color3"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <p class="fs-6 fw-bold mb-0">
+                                Q: How do I set budgets and categorize expenses?
+                            </p>
 
-                                <div class="collapse mt-2" id="collapseExample3">
-                                    A: You can set budgets and categorize expenses using the settings menu or buttons within the app interface.
-                                </div>
+                            <div class="collapse mt-2" id="collapseExample3">
+                                A: You can set budgets and categorize expenses using the settings menu or buttons within the app interface.
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
-                        <div class="row">
-                            <div class="col-md-1 d-flex align-items-center p-0">
-                                <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
-                                    <i class="fas fa-plus fa-xl color3"></i>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-11">
-                                <p class="fs-6 fw-bold mb-0">
-                                    Q: Is my app data backed up? What if I encounter a failure?
-                                </p>
+                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center p-0">
+                            <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+                                <i class="fas fa-plus fa-xl color3"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <p class="fs-6 fw-bold mb-0">
+                                Q: Is my app data backed up? What if I encounter a failure?
+                            </p>
 
-                                <div class="collapse mt-2" id="collapseExample4">
-                                    Yes, your app data is regularly backed up. You can manually restore data from the app's settings menu. Alternatively, you can contact our support team for assistance.
-                                </div>
+                            <div class="collapse mt-2" id="collapseExample4">
+                                Yes, your app data is regularly backed up. You can manually restore data from the app's settings menu. Alternatively, you can contact our support team for assistance.
                             </div>
                         </div>
                     </div>
