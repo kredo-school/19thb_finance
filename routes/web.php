@@ -6,6 +6,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/premium', function () {
+    return view('premium');
+});
+
+Route::get('/cheatlogin', function () {
+    return view('cheatlogin');
+});
+
 Route::get('/faq', function () {
     return view('contacts.faq');
 });
@@ -16,6 +24,10 @@ Route::get('/inquiry', function () {
 
 Route::get('/aboutUs', function () {
     return view('contacts.aboutUs');
+});
+
+Route::get('/privacyandterms', function () {
+    return view('privacyandterms');
 });
 
 Auth::routes();
