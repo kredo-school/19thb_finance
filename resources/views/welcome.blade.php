@@ -5,17 +5,18 @@
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
     <div class="bg-dark">
-        <img src="images/bg_img_landing_learnMore.jpg" alt="background_Money-Juu" class="img-fluid opacity-75">
+        <div class="bg-img opacity-75"></div>
+        {{-- <img src="images/bg_img_landing_learnMore.jpg" alt="background_Money-Juu" class="img-fluid opacity-75"> --}}
     </div>
     
-    <div class="row d-flex align-items-center p-0">
+    <div class="row d-flex align-items-md-center m-0 p-0" style="max-width: 1000px;">
         <div class="col-md-11 offset-md-1">
-            <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="position-absolute top-50 start-50 translate-middle my-5 ps-5 w-100">
                 <h1 class="fw-bold text-white" style="letter-spacing: .2rem;">Have Fun Saving</h1>
 
-                <p class="h5 fw-bold color4 mb-4" style="letter-spacing: .1rem;">Learn more on our website by signing in now.</p>
+                <p class="h5 fw-bold color4" style="letter-spacing: .1rem;">Learn more on our website by signing in now.</p>
 
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-row my-4" style="max-width: 800px;">
                     <div class="col-md-4">
                         @if (Route::has('login'))
                             @auth
@@ -28,7 +29,7 @@
                             @else
                                 <a
                                     href="{{ route('login') }}"
-                                    class="btn btn-main fw-bold color-Background bg-color4 rounded-pill w-100 px-3" style="letter-spacing: .1rem;"
+                                    class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;"
                                 >
                                     Sign In
                                 </a>
@@ -36,7 +37,7 @@
                                 @if (Route::has('register'))
                                     <a
                                         href="{{ route('register') }}"
-                                        class="btn btn-link h4 fw-bold color4 text-md-start d-block" style="letter-spacing: .1rem;"
+                                        class="btn btn-link fw-bold color4 text-md-start d-block" style="letter-spacing: .1rem;"
                                     >
                                         Create Acount
                                     </a>
@@ -46,7 +47,63 @@
                     </div>
 
                     <div class="col-md-4 offset-md-4 ms-2">
-                        <a class="btn btn-main-1 fw-bold rounded-pill w-100 px-3" style="letter-spacing: .1rem;" href="#">{{ __('Learn More') }}</a>
+                        <a class="btn btn-main-1 fw-bold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="#">{{ __('Learn More') }}</a>
+                    </div>
+                </div>
+
+                <div class="container d-flex justify-content-start m-0 p-0">
+                    <div class="row row-cols-1 row-cols-lg-4 row-cols-2">
+                        <div class="col">
+                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                                <div class="d-flex flex-row">
+                                    <img src="{{ asset('images/calendar-icon.png') }}" alt="calendar_icon" style="max-width: 30px;" class="py-2">
+                                    <p class="h4 text-white ms-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Calendar</p>
+                                </div>
+    
+                                <div class="d-flex">
+                                    <img src="{{ asset('images/calender-sample.png') }}" alt="calendar_sample"  style="max-width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                                <div class="d-flex flex-row">
+                                    <img src="{{ asset('images/entry-icon.png') }}" alt="entry_icon" style="max-width: 30px;" class="py-2">
+                                    <p class="h4 text-white ms-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Entry</p>
+                                </div>
+    
+                                <div class="d-flex">
+                                    <img src="{{ asset('images/entry-sample.png') }}" alt="entry_sample" style="max-width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                                <div class="d-flex flex-row">
+                                    <img src="{{ asset('images/analysis-icon.png') }}" alt="analysis_icon" style="max-width: 30px;" class="py-2">
+                                    <p class="h4 text-white ms-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Analysis</p>
+                                </div>
+    
+                                <div class="d-flex">
+                                    <img src="{{ asset('images/analysis-sample.png') }}" alt="analysis_sample" style="max-width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card card-body rounded-4 my-2 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
+                                <div class="d-flex flex-row">
+                                    <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 25px;" class="py-2">
+                                    <p class="h4 text-white ms-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p>
+                                </div>
+    
+                                <div class="d-flex">
+                                    <img src="{{ asset('images/account-sample.png') }}" alt="account_sample" style="max-width: 156px;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

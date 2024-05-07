@@ -17,7 +17,7 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row mb-2">
-                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('About Us') }}</p>
+                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('About Us') }}</p>
             </div>
 
             <div class="row mb-2">

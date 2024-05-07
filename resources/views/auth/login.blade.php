@@ -13,11 +13,11 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row">
-                <div class="outer-button-1">
-                    <div class="inner-button-1 p-0">
-                        <h2 class="h4 text-center rounded-3 shadow bg-white bg-opacity-50 m-0 px-3 py-1" style="max-width: 150px;">{{ __('Sign In') }}</h2>
-                    </div>
-                </div>
+                {{-- <div class="outer-button-1">
+                    <div class="inner-button-1 p-0"> --}}
+                        <h2 class="h4 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Sign In') }}</h2>
+                    {{-- </div>
+                </div> --}}
             </div>
 
             <div class="row position-absolute bottom-0 end-0">
@@ -64,7 +64,7 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-main fw-bold color-Background bg-color4 rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Sign In') }}
                                 </button>
                             </div>
