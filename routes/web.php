@@ -6,22 +6,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/analysis/summary', function () {
-    return view('analysis.summary');
+Route::get('/faq', function () {
+    return view('contacts.faq');
 });
 
-Route::get('/analysis/category', function () {
-    return view('analysis.category');
+Route::get('/inquiry', function () {
+    return view('contacts.inquiry');
 });
 
-Route::get('/analysis/cashflow', function () {
-    return view('analysis.cashflow');
+Route::get('/aboutUs', function () {
+    return view('contacts.aboutUs');
 });
 
-Route::get('/analysis/people', function () {
-    return view('analysis.people');
-});
-
-//Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
