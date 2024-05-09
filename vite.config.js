@@ -8,6 +8,7 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
+                'resources/css/app.css',
                 'resources/js/transaction.js',
                 'resources/js/sidebar.js'
             ],
@@ -25,6 +26,11 @@ export default defineConfig({
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
+        },
+    },
+    server: {
+        hmr: {
+            host: 'localhost',
         },
     },
 });

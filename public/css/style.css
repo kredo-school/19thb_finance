@@ -32,7 +32,31 @@
     color: #343A40;
 }
 .color-Muted{
-    color: #D1D1D1;
+    color: #D9D9D9;
+}
+
+#premium-p {
+    color: #EAE225; 
+    text-shadow: 0px 3px 5px #060606;
+    font-size: 45px;
+    font-weight: 400 !important;
+}
+
+/* border */
+.outer-button {
+  width: auto;
+  height: auto;
+  background:  linear-gradient(to right, #3ACBD9, #F7A072);
+  border-radius: 9999px;
+  padding: 3px;
+  margin-right: 10px;
+}
+.inner-button {
+  width: auto;
+  height: auto;
+  background: white;
+  border-radius: 9999px;
+  text-align: center;
 }
 
 /* bg color */
@@ -114,6 +138,12 @@
 .color-FFD700 { color: #FFD700;}
 .color-92DF56 { color: #92DF56;}
 
+.bg-color-Rainbow-opacity{
+  background: -moz-linear-gradient(left, rgba(58, 203, 217, 0.8), rgba(247, 160, 114, 0.8));
+  background: -webkit-linear-gradient(left, rgba(58, 203, 217, 0.8), rgba(247, 160, 114, 0.8));
+  background: linear-gradient(to right, rgba(58, 203, 217, 0.8), rgba(247, 160, 114, 0.8));
+}
+
 /* btn */
 .btn-main {
   color: #fff;
@@ -172,6 +202,20 @@
   object-fit: contain;
 }
 
+
+/* premium btn */
+#ul-black {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#ul-black li::before {
+  content: "\2022"; 
+  color: black;
+  display: inline-block;
+  width: 1em; 
+  margin-left: -1em; 
+}
 
 /* nav modal */
 .fullscreen .modal-dialog {
@@ -398,4 +442,71 @@ p {
     margin: 0 1rem;
   }
 
+}
+
+.btn-main {
+color: #fff;
+background: #F7A072;
+border: solid 2px #F7A072 !important;
+border-radius: 50px;
+}
+.btn-main:hover {
+background: #fff;
+color: #F7A072;
+
+  .border-color4{
+      border: solid 1px #F7A072 !important;
+  }
+  .icon-in-btn {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(5416%) hue-rotate(314deg) brightness(99%) contrast(95%);
+  }
+}
+
+.btn-main-1 {
+color: #F7A072;
+background: #fff;
+border: solid 2px #fff !important;
+border-radius: 50px;
+}
+.btn-main-1:hover {
+background: #F7A072;
+color: #fff;
+
+  .border-color4{
+      border: solid 1px #F7A072 !important;
+  }
+  .icon-in-btn {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(5416%) hue-rotate(314deg) brightness(99%) contrast(95%);
+  }
+}
+
+.outer-button-1 {
+  width: auto;
+  height: auto;
+  background:  linear-gradient(to right, #3ACBD9, #F7A072);
+  border-radius: 8px;
+  padding: 3px;
+  margin-right: 10px;
+}
+.inner-button-1 {
+  width: auto;
+  height: auto;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Learn More */
+.bg-img {
+  width: 100%;
+  height: 85vh;
+  background-image: url(../images/bg_img_landing_learnMore.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
