@@ -3,22 +3,6 @@
 @section('title', "FAQ")
 
 @section('content')
-{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> --}}
-
-{{-- <style>
-    .toggle-icon {
-        cursor: pointer;
-    }
-    .collapse.show + .toggle-icon .fa-plus {
-        display: none;
-    }
-    .collapse + .toggle-icon .fa-minus {
-        display: none;
-    }
-</style> --}}
-
 <div class="container-fluid position-relative m-0 p-0">
     <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="background_FAQ" class="w-100" style="height: 140px;">
 
@@ -37,7 +21,7 @@
             </div>
 
             <div class="row mb-2">
-                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;">{{ __('FAQ') }}</p>
+                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('FAQ') }}</p>
             </div>
 
             <div class="row mb-2">
@@ -50,8 +34,8 @@
         </div>
         
         <div class="col-md-auto d-flex align-items-stretch">
-            <div class="card border-0 mx-3 p-0 bg-color-Background">
-                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+            <div class="mx-3 p-0">
+                <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center p-0">
                             <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
@@ -71,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center p-0">
                             <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
@@ -91,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center p-0">
                             <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
@@ -111,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
+                <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center p-0">
                             <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">

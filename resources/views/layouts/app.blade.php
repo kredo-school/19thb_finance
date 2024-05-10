@@ -19,7 +19,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/transaction.js', 'resources/js/sidebar.js'])
 
     {{-- Chart.js --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -46,6 +46,9 @@
             @yield('content')
         </main>
     </div>
+
+
+
 </body>
 
 <footer class="footer bg-color-Letter">
