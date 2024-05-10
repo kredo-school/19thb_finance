@@ -1,11 +1,11 @@
 @guest
-<div class="bg-color-Background">
+<div class="bg-color-Background" style="height: 80px;">
     <div class="container">
         <nav class="navbar navbar-expand-lg">
 
             <!-- logo -->
             <a class="navbar-brand" href="#" style="max-width: 200px;">
-                <img src="images/pig-logo.png" alt="" class="img-fluid">
+                <img src="{{ asset('images/pig-logo.png') }}" alt="" class="img-fluid">
             </a>
             
             <button class="navbar-toggler"type="button" 
@@ -45,7 +45,7 @@
 
             <!-- logo -->
             <a href="navbar-brand" href="#" style="max-width: 200px;">
-                <img src="images/pig-logo.png" alt="" class="img-fluid">
+                <img src="{{ asset('images/pig-logo.png') }}" alt="" class="img-fluid">
             </a>
 
             <!-- nav -->
@@ -60,7 +60,7 @@
                                 <img src="{{ Auth::user()->avatar }}" alt="" class="avatar-sm rounded-circle">
                             @else
                                 <div style="width: 38px; height: 38px;" class="m-1">
-                                    <img src="images/people_default.png" alt="" class="img-fluid avatar-sm border rounded-circle p-1">
+                                    <img src="{{ asset('images/people_default.png') }}" alt="" class="img-fluid avatar-sm border rounded-circle p-1">
                                 </div>
                             @endif
                         </a>
@@ -96,7 +96,7 @@
                     <div class="modal-header">
                         <!-- logo -->
                         <a href="navbar-brand" href="#" style="max-width: 200px;">
-                            <img src="images/pig-logo.png" alt="" class="img-fluid">
+                            <img src="{{ asset('images/pig-logo.png') }}" alt="" class="img-fluid">
                         </a>
                         <button type="button" class="btn-close bg-white me-3 align-top" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -122,4 +122,3 @@
 </div>
 
 @endguest
-
