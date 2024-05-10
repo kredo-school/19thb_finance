@@ -44,7 +44,6 @@
                     <p class="h3" style="color: rgba(255, 99, 132, 1)">¥4,500</p>                  
                 </div>
                 <div>
-
                     <canvas id="weekChart"></canvas>
                 </div>
             </div>
@@ -52,6 +51,6 @@
 
     </div>
 
-    <script src="{{ asset('js/analysischart.js') }}"></script>
+    <script src="{{ asset('js/summarychart.js') }}"></script>
     
 @endsection

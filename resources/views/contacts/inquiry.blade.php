@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
-    <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="bg_img_signin_register" class="w-100" style="height: 140px;">
+    <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="background_Inquiry" class="w-100" style="height: 140px;">
 
     <img src="images/balloon.png" alt="balloon" class="opacity-75 position-absolute top-50 end-0 translate-middle" style="height: 140px;">
     
