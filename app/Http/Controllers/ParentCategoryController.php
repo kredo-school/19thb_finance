@@ -51,7 +51,7 @@ class ParentCategoryController extends Controller
 
         $this->parent_category->save();
 
-        return redirect()->back();
+        return redirect()->route('category.show');
     }
 
     public function edit($id) {
@@ -76,6 +76,7 @@ class ParentCategoryController extends Controller
         $parent_category->type = $request->type;
         $parent_category->color_hex = $request->color_hex;
         $parent_category->icon_path = $request->icon_path;
+        $parent_category->is_default = 0;
 
         $parent_category->save();
 
