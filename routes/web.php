@@ -1,18 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PremiumController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/premium', function () {
-    return view('premium');
-});
-
-Route::get('/cheatlogin', function () {
-    return view('cheatlogin');
-});
 
 Route::get('/faq', function () {
     return view('contacts.faq');
@@ -26,6 +16,16 @@ Route::get('/aboutUs', function () {
     return view('contacts.aboutUs');
 });
 
+
+# Premium
+Route::get('/premium', function () {
+    return view('premium');
+});
+
+Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
+
+
+# Privacy & Terms
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
