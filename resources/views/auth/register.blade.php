@@ -88,7 +88,7 @@
                             </div>
 
                             <div>
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="#">
+                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ route('login') }}">
                                     {{ __('I already have an account') }}
                                 </a>
     

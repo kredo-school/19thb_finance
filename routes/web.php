@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ChildCategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParentCategoryController;
@@ -18,25 +21,20 @@ Route::get('/cheatlogin', function () {
     return view('cheatlogin');
 });
 
-Route::get('/faq', function () {
-    return view('contacts.faq');
-});
-
-Route::get('/inquiry', function () {
-    return view('contacts.inquiry');
-});
-
-Route::get('/aboutUs', function () {
-    return view('contacts.aboutUs');
-});
-
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
 
+
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// contacts
+Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
+Route::get('/faq', [FaqController::class, 'create'])->name('faq');
+Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
+Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
 
 Route::group(['middleware' => 'auth'], function() {
     // Category

@@ -36,7 +36,7 @@
         <div class="col-md-auto d-flex align-items-stretch">
             <div class="card mx-3 p-0">
                 <div class="card-body border border-3 px-5 py-4 bg-color-Background" style="max-width: 500px;">
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('inquiry.store') }}">
                         @csrf
 
                         <div class="row mb-1">
@@ -108,6 +108,11 @@
                                 <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Send') }}
                                 </button>
+                                @if (session('message'))
+                                    <div class="fw-bold color4 mt-1">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </form>
