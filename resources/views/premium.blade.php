@@ -92,7 +92,7 @@
                         </div>
 
                         <div>
-                            <button class="btn bg-color4 text-white inner-button w-100 my-2 text-center" type="submit">Send</button>
+                            <button type="submit" class="btn rounded-pill text-white fw-bold w-100 bg-color4">Send</button>
                         </div>
                     </div>
                 </div>
