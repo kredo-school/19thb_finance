@@ -80,7 +80,7 @@
                                 </a>
                                 @endif
 
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-block" href="#">
+                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-block" href="{{ route('register') }}">
                                     {{ __('Create an Account') }}
                                 </a>
 
