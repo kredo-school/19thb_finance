@@ -8,7 +8,7 @@
 
     <img src="images/balloon.png" alt="balloon" class="opacity-75 position-absolute top-50 end-0 translate-middle" style="height: 140px;">
     
-    <img src="images/card.png" alt="card" class="z-0 opacity-75 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
+    <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
     <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .2rem;">FAQ</h2>
 </div>
