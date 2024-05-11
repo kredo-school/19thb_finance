@@ -61,7 +61,7 @@
                                 </div>
     
                                 <div class="d-flex">
-                                    <img src="{{ asset('images/calender-sample.png') }}" alt="calendar_sample"  style="max-width: 150px;">
+                                    <img src="{{ asset('images/calender-sample.png') }}" alt="calendar_sample"  style="width: 150px; height: 110px;">
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                 </div>
     
                                 <div class="d-flex">
-                                    <img src="{{ asset('images/entry-sample.png') }}" alt="entry_sample" style="max-width: 150px;">
+                                    <img src="{{ asset('images/entry-sample.png') }}" alt="entry_sample" style="width: 150px; height: 110px;">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                 </div>
     
                                 <div class="d-flex">
-                                    <img src="{{ asset('images/analysis-sample.png') }}" alt="analysis_sample" style="max-width: 150px;">
+                                    <img src="{{ asset('images/analysis-sample.png') }}" alt="analysis_sample" style="width: 150px; height: 110px;">
                                 </div>
                             </div>
                         </div>
@@ -95,12 +95,12 @@
                         <div class="col">
                             <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
-                                    <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 25px;" class="py-2">
+                                    <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 30px;" class="py-2">
                                     <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p>
                                 </div>
     
                                 <div class="d-flex">
-                                    <img src="{{ asset('images/account-sample.png') }}" alt="account_sample" style="max-width: 156px;">
+                                    <img src="{{ asset('images/account-sample.png') }}" alt="account_sample" style="width: 150px; height: 110px;">
                                 </div>
                             </div>
                         </div>
