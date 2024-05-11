@@ -13,7 +13,7 @@
                     <img src="{{ asset('images/category-icon/' . $parent_category->icon_path . '.svg') }}" alt="{{ $parent_category->icon_path }}" width="25px" class="me-1 filter-{{ $parent_category->color_hex }}">
                     <p class="h5 my-auto">
                         <span style="color: #{{ $parent_category->color_hex }};">{{ $parent_category->name }}</span>
-                        &nbsp; > &nbsp;
+                        &nbsp; &gt; &nbsp;
                         <span class="h4">{{ $child_category->name }}</span>
                     </p>
                 </div>
