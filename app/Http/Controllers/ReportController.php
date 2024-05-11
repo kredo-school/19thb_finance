@@ -18,7 +18,7 @@ class ReportController extends Controller
         ]);
 
         $report = Report::create($validated);
-        $this->report->user_id = Auth::user()->id;
+        // $this->report->user_id = Auth::user()->id;
         return back()->with('message', 'Thank you for your inquiry!');
     }
 }
