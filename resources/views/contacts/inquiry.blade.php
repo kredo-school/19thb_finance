@@ -28,7 +28,7 @@
                 <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
             </div>
 
-            <div class="row position-absolute bottom-0 end-0">
+            <div class="row mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>

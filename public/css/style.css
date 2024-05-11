@@ -504,6 +504,24 @@ color: #fff;
   background-size: cover;
 }
 
+.faq-item {
+  cursor: pointer;
+  transition: all .3s; /* アニメーション */
+}
+
+/* faq is-active */
+.faq-item.is-active {
+  color: #F7A072;
+}
+.faq-title.is-active {
+  color: #F7A072;
+}
+
+/* faq is-show */
+.faq-box.is-show {
+  display: block;
+}
+
 /* Edit Category */
 .balloon::before{
   content: '';
@@ -613,4 +631,3 @@ color: #fff;
 
 .filter-218C74 {
   filter: brightness(0) saturate(100%) invert(41%) sepia(70%) saturate(455%) hue-rotate(116deg) brightness(94%) contrast(85%);
-}
