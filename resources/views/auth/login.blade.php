@@ -12,7 +12,7 @@
 <div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
-            <div class="row">
+            <div class="row mb-2">
                 {{-- <div class="outer-button-1">
                     <div class="inner-button-1 p-0"> --}}
                         <h2 class="h4 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Sign In') }}</h2>
@@ -20,7 +20,7 @@
                 </div> --}}
             </div>
 
-            <div class="row position-absolute bottom-0 end-0">
+            <div class="row mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>

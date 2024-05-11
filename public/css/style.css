@@ -251,3 +251,21 @@ color: #fff;
   background-attachment: fixed;
   background-size: cover;
 }
+
+.faq-item {
+  cursor: pointer;
+  transition: all .3s; /* アニメーション */
+}
+
+/* faq is-active */
+.faq-item.is-active {
+  color: #F7A072;
+}
+.faq-title.is-active {
+  color: #F7A072;
+}
+
+/* faq is-show */
+.faq-box.is-show {
+  display: block;
+}
