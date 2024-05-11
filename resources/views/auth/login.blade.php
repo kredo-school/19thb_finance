@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
-    <img src="images/bg_img_signin_register.jpg" alt="bg_img_signin_register" class="w-100" style="height: 140px;">
+    <img src="images/bg_img_signin_register.jpg" alt="background_signIn" class="w-100" style="height: 140px;">
 
     <p class="h2 fw-bold color-Yellow position-absolute top-50 start-50 translate-middle" style="letter-spacing: .2rem;">Welcome to Money-Juu</p>
 </div>
@@ -13,7 +13,11 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row">
-                <h2 class="h4 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px;">{{ __('Sign In') }}</h2>
+                {{-- <div class="outer-button-1">
+                    <div class="inner-button-1 p-0"> --}}
+                        <h2 class="h4 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Sign In') }}</h2>
+                    {{-- </div>
+                </div> --}}
             </div>
 
             <div class="row position-absolute bottom-0 end-0">
@@ -60,7 +64,7 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn fw-bold color-Background bg-color4 rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Sign In') }}
                                 </button>
                             </div>
