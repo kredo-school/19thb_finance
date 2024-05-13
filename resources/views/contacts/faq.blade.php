@@ -10,7 +10,7 @@
     
     <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
-    <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .2rem;">FAQ</h2>
+    <h2 class="color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .2rem;">FAQ</h2>
 </div>
 
 <div class="container my-4">
@@ -44,7 +44,7 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold text-secondary mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: What devices do I need to use this app?
                             </p>
 
@@ -64,7 +64,7 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold text-secondary mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How much does it cost to use the app?
                             </p>
 
@@ -84,7 +84,7 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold text-secondary mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How do I set budgets and categorize expenses?
                             </p>
 
@@ -104,7 +104,7 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold text-secondary mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: Is my app data backed up? What if I encounter a failure?
                             </p>
 

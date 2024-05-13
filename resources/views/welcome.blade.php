@@ -14,7 +14,7 @@
             <div class="position-absolute top-50 start-50 translate-middle my-2 px-5 py-0 w-100">
                 <h1 class="fw-bold text-white" style="letter-spacing: .2rem;">Have Fun Saving</h1>
 
-                <p class="h5 fw-bold color4" style="letter-spacing: .1rem;">Learn more on our website by signing in now.</p>
+                <p class="h5 fw-semibold color4" style="letter-spacing: .1rem;">Learn more on our website by signing in now.</p>
 
                 <div class="d-flex flex-row my-3" style="max-width: 800px;">
                     <div class="col-md-4">
@@ -29,7 +29,7 @@
                             @else
                                 <a
                                     href="{{ route('login') }}"
-                                    class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;"
+                                    class="btn btn-main fw-semibold rounded-pill w-100" style="letter-spacing: .1rem;"
                                 >
                                     Sign In
                                 </a>
@@ -37,7 +37,7 @@
                                 @if (Route::has('register'))
                                     <a
                                         href="{{ route('register') }}"
-                                        class="btn btn-link fw-bold color4 text-md-start d-block" style="letter-spacing: .1rem;"
+                                        class="btn btn-link fw-semibold color4 text-md-start d-block" style="letter-spacing: .1rem;"
                                     >
                                         Create Acount
                                     </a>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="col-md-4 offset-md-4 ms-2">
-                        <a class="btn btn-main-1 fw-bold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="#">{{ __('Learn More') }}</a>
+                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="#">{{ __('Learn More') }}</a>
                     </div>
                 </div>
 

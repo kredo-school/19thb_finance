@@ -10,7 +10,7 @@
     
     <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
-    <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">Inquiry</h2>
+    <h2 class="color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">Inquiry</h2>
 </div>
 
 <div class="container my-3">
@@ -105,7 +105,7 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-semibold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Send') }}
                                 </button>
                                 @if (session('message'))

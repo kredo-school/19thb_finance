@@ -10,7 +10,7 @@
     
     <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
-    <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">About Us</h2>
+    <h2 class="color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">About Us</h2>
 </div>
 
 <div class="container my-3">
@@ -42,7 +42,7 @@
                         {{-- <hr class="ms-2" style="width: 10px;"> --}}
 
                         <div class="col-md-11 offset-md-1">
-                            <p class="fs-6 fw-bold text-secondary mb-1">Cute Pig</p>
+                            <p class="fs-6 fw-semibold text-secondary mb-1">Cute Pig</p>
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
                         <div class="bg-color-Rainbow ms-2" style="width: 10px; height: 2px;"></div>
 
                         <div class="col-md-11 offset-md-1">
-                            <p class="fs-6 fw-bold text-secondary mb-1">1-1-2 Oshiage, Sumida-ku, Tokyo 131-0045</p>
+                            <p class="fs-6 fw-semibold text-secondary mb-1">1-1-2 Oshiage, Sumida-ku, Tokyo 131-0045</p>
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@
                         <div class="bg-color-Rainbow ms-2" style="width: 10px; height: 2px;"></div>
 
                         <div class="col-md-11 offset-md-1">
-                            <p class="fs-6 fw-bold text-secondary mb-1">April 1, 2024</p>
+                            <p class="fs-6 fw-semibold text-secondary mb-1">April 1, 2024</p>
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@
                         <div class="bg-color-Rainbow ms-2" style="width: 10px; height: 2px;"></div>
 
                         <div class="col-md-11 offset-md-1">
-                            <p class="fs-6 fw-bold text-secondary mb-2">Money_juu @gmil .com</p>
+                            <p class="fs-6 fw-semibold text-secondary mb-2">Money_juu @gmil .com</p>
                         </div>
                     </div>
 

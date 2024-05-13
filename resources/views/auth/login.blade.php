@@ -6,7 +6,7 @@
 <div class="container-fluid position-relative m-0 p-0">
     <img src="images/bg_img_signin_register.jpg" alt="background_signIn" class="w-100" style="height: 140px;">
 
-    <p class="h2 fw-bold color-Yellow position-absolute top-50 start-50 translate-middle" style="letter-spacing: .2rem;">Welcome to Money-Juu</p>
+    <p class="h2 fw-semibold color-Yellow position-absolute top-50 start-50 translate-middle" style="letter-spacing: .2rem;">Welcome to Money-Juu</p>
 </div>
 
 <div class="container my-4">
@@ -64,7 +64,7 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-semibold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Sign In') }}
                                 </button>
                             </div>
