@@ -29,7 +29,6 @@ Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
 
-
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
 Route::get('/faq', [FaqController::class, 'create'])->name('faq');
