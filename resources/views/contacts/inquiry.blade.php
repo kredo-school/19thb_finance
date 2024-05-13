@@ -28,7 +28,7 @@
                 <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
             </div>
 
-            <div class="row position-absolute bottom-0 end-0">
+            <div class="row mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="col-md-auto d-flex align-items-stretch">
             <div class="card mx-3 p-0">
                 <div class="card-body border border-3 px-5 py-4 bg-color-Background" style="max-width: 500px;">
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('inquiry.store') }}">
                         @csrf
 
                         <div class="row mb-1">
@@ -108,6 +108,11 @@
                                 <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Send') }}
                                 </button>
+                                @if (session('message'))
+                                    <div class="fw-bold color4 mt-1">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </form>

@@ -63,4 +63,3 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
 
 });
-
