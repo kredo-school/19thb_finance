@@ -1,12 +1,5 @@
-* {
-  font-family: 'Poppins';
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  li {list-style: none;}
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 /* font color */
@@ -510,3 +503,131 @@ color: #fff;
   background-attachment: fixed;
   background-size: cover;
 }
+
+.faq-item {
+  cursor: pointer;
+  transition: all .3s; /* アニメーション */
+}
+
+/* faq is-active */
+.faq-item.is-active {
+  color: #F7A072;
+}
+.faq-title.is-active {
+  color: #F7A072;
+}
+
+/* faq is-show */
+.faq-box.is-show {
+  display: block;
+}
+
+/* Edit Category */
+.balloon::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 150px;
+  top: -30px;
+  border-right: 50px solid transparent;
+  border-bottom: 30px solid #F8FAFC;
+  border-left: 50px solid transparent;
+}
+
+/* icon color filter */
+.filter-2FCC71 {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(45%) saturate(626%) hue-rotate(92deg) brightness(89%) contrast(98%);
+}
+
+.filter-B8E894 {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(7%) saturate(2126%) hue-rotate(37deg) brightness(95%) contrast(91%);
+}
+
+.filter-FFD70A {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(90%) saturate(5508%) hue-rotate(338deg) brightness(96%) contrast(109%);
+}
+
+.filter-FECA57 {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(23%) saturate(6939%) hue-rotate(314deg) brightness(102%) contrast(103%);
+}
+
+.filter-FFAA3F {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(97%) saturate(842%) hue-rotate(328deg) brightness(103%) contrast(101%);
+}
+
+.filter-FF7F50 {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(96%) saturate(2351%) hue-rotate(326deg) brightness(103%) contrast(102%);
+}
+
+.filter-FF3F34 {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(81%) saturate(2648%) hue-rotate(341deg) brightness(101%) contrast(100%);
+}
+
+.filter-FD79A8 {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(90%) saturate(364%) hue-rotate(293deg) brightness(101%) contrast(99%);
+}
+
+.filter-F8A5C2 {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(98%) saturate(5953%) hue-rotate(283deg) brightness(100%) contrast(95%);
+}
+
+.filter-FF9FF3 {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(23%) saturate(3154%) hue-rotate(230deg) brightness(101%) contrast(105%);
+}
+
+.filter-D980FA {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(37%) saturate(6782%) hue-rotate(224deg) brightness(101%) contrast(99%);
+}
+
+.filter-6C5CE7 {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(80%) saturate(3566%) hue-rotate(230deg) brightness(93%) contrast(95%);
+}
+
+.filter-0652DD {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(98%) saturate(6844%) hue-rotate(218deg) brightness(91%) contrast(95%);
+}
+
+.filter-2E86DE {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(91%) saturate(901%) hue-rotate(185deg) brightness(92%) contrast(88%);
+}
+
+.filter-54A0FF {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(84%) saturate(3265%) hue-rotate(194deg) brightness(105%) contrast(101%);
+}
+
+.filter-48DBFB {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(62%) saturate(3680%) hue-rotate(158deg) brightness(99%) contrast(98%);
+}
+
+.filter-C8D6E5 {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(12%) saturate(345%) hue-rotate(175deg) brightness(94%) contrast(90%);
+}
+
+.filter-7F8C8D {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(2%) saturate(1248%) hue-rotate(136deg) brightness(93%) contrast(90%);
+}
+
+.filter-1E3799 {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(54%) saturate(3288%) hue-rotate(221deg) brightness(83%) contrast(98%);
+}
+
+.filter-474787 {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(36%) saturate(847%) hue-rotate(201deg) brightness(84%) contrast(92%);
+}
+
+.filter-833471 {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(51%) saturate(1211%) hue-rotate(271deg) brightness(88%) contrast(87%);
+}
+
+.filter-C0392B {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(96%) saturate(1719%) hue-rotate(344deg) brightness(94%) contrast(89%);
+}
+
+.filter-B71540 {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(52%) saturate(4858%) hue-rotate(330deg) brightness(98%) contrast(99%);
+}
+
+.filter-218C74 {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(70%) saturate(455%) hue-rotate(116deg) brightness(94%) contrast(85%);
