@@ -10,25 +10,25 @@
     
     <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
-    <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">Inquiry</h2>
+    <h2 class="color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .1rem;">Inquiry</h2>
 </div>
 
 <div class="container my-3">
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row mb-2">
-                <a class="h4 fw-bold btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('About Us') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('About Us') }}</a>
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-bold btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="#">{{ __('FAQ') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="#">{{ __('FAQ') }}</a>
             </div>
 
             <div class="row mb-2">
-                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
+                <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
             </div>
 
-            <div class="row position-absolute bottom-0 end-0">
+            <div class="row mx-3 mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="col-md-auto d-flex align-items-stretch">
             <div class="card mx-3 p-0">
                 <div class="card-body border border-3 px-5 py-4 bg-color-Background" style="max-width: 500px;">
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('inquiry.store') }}">
                         @csrf
 
                         <div class="row mb-1">
@@ -105,9 +105,14 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-semibold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Send') }}
                                 </button>
+                                @if (session('message'))
+                                    <div class="fw-bold color4 mt-1">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </form>

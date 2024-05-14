@@ -6,17 +6,17 @@
 <div class="container-fluid position-relative m-0 p-0">
     <img src="images/bg_img_signin_register.jpg" alt="background_register" class="w-100" style="height: 140px;">
 
-    <p class="h2 fw-bold color-Yellow position-absolute top-50 start-50 translate-middle" style="letter-spacing: .2rem;">Welcome to Money-Juu</p>
+    <p class="h2 fw-semibold color-Yellow position-absolute top-50 start-50 translate-middle" style="letter-spacing: .2rem;">Welcome to Money-Juu</p>
 </div>
 
 <div class="container my-3">
     <div class="row justify-content-center">
-        <div class="col-md-auto position-relative" >
-            <div class="row">
-                <h2 class="h4 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Register') }}</h2>
+        <div class="col-md-auto position-relative">
+            <div class="row mb-2">
+                <h2 class="h4 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-4 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Register') }}</h2>
             </div>
 
-            <div class="row position-absolute bottom-0 end-0">
+            <div class="row mx-1 mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>
@@ -82,13 +82,13 @@
 
                         <div class="row mb-0 p-0">
                             <div class="mb-2">
-                                <button type="submit" class="btn btn-main fw-bold rounded-pill w-100" style="letter-spacing: .1rem;">
+                                <button type="submit" class="btn btn-main fw-semibold rounded-pill w-100" style="letter-spacing: .1rem;">
                                     {{ __('Register') }}
                                 </button>
                             </div>
 
                             <div>
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="#">
+                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ route('login') }}">
                                     {{ __('I already have an account') }}
                                 </a>
     
