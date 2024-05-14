@@ -10,25 +10,25 @@
     
     <img src="images/card.png" alt="card" class="z-0 position-absolute top-50 start-50 translate-middle" style="width: 160px; height: 130px;">
 
-    <h2 class="fw-bold color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .2rem;">FAQ</h2>
+    <h2 class="color3 position-absolute bottom-0 start-50 translate-middle" style="letter-spacing: .2rem;">FAQ</h2>
 </div>
 
 <div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row mb-2">
-                <a class="h4 fw-bold btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('About Us') }}</a>
+                <a class="h4 fw-bold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('About Us') }}</a>
             </div>
 
             <div class="row mb-2">
-                <p class="h5 text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('FAQ') }}</p>
+                <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('FAQ') }}</p>
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-bold btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('Inquiry Form') }}</a>
+                <a class="h4 fw-bold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('Inquiry Form') }}</a>
             </div>
 
-            <div class="row mb-2 position-absolute bottom-0 end-0">
+            <div class="row mx-1 mb-2 position-absolute bottom-0 end-0">
                 <img src="images/pink_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
             </div>
         </div>
@@ -44,11 +44,11 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: What devices do I need to use this app?
                             </p>
 
-                            <div class="collapse mt-2 faq-box faq-box001" data-panel="01" id="collapseExample1">
+                            <div class="collapse text-secondary mt-2 faq-box faq-box001" data-panel="01" id="collapseExample1">
                                 This app is available for both desktop and mobile devices. It can be used on Windows, Mac, iOS, and Android devices.
                             </div>
                         </div>
@@ -64,11 +64,11 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How much does it cost to use the app?
                             </p>
 
-                            <div class="collapse mt-2 faq-box faq-box002" data-panel="02" id="collapseExample2">
+                            <div class="collapse text-secondary mt-2 faq-box faq-box002" data-panel="02" id="collapseExample2">
                                 A: The app offers basic features for free. However, premium features or additional services may require a monthly or yearly subscription.
                             </div>
                         </div>
@@ -84,11 +84,11 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How do I set budgets and categorize expenses?
                             </p>
 
-                            <div class="collapse mt-2 faq-box faq-box003" data-panel="03" id="collapseExample3">
+                            <div class="collapse text-secondary mt-2 faq-box faq-box003" data-panel="03" id="collapseExample3">
                                 A: You can set budgets and categorize expenses using the settings menu or buttons within the app interface.
                             </div>
                         </div>
@@ -104,11 +104,11 @@
                         </div>
                         
                         <div class="col-sm-11">
-                            <p class="fs-6 fw-bold mb-0 faq-title">
+                            <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: Is my app data backed up? What if I encounter a failure?
                             </p>
 
-                            <div class="collapse mt-2 faq-box faq-box004" data-panel="04" id="collapseExample4">
+                            <div class="collapse text-secondary mt-2 faq-box faq-box004" data-panel="04" id="collapseExample4">
                                 Yes, your app data is regularly backed up. You can manually restore data from the app's settings menu. Alternatively, you can contact our support team for assistance.
                             </div>
                         </div>
