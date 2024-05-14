@@ -8,23 +8,35 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParentCategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/faq', function () {
+    return view('contacts.faq');
 });
 
+Route::get('/inquiry', function () {
+    return view('contacts.inquiry');
+});
+
+Route::get('/aboutUs', function () {
+    return view('contacts.aboutUs');
+});
+
+
+# Premium
 Route::get('/premium', function () {
     return view('premium');
 });
 
-Route::get('/cheatlogin', function () {
-    return view('cheatlogin');
-});
+Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 
+
+# Privacy & Terms
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
