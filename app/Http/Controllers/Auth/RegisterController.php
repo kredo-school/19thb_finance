@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ParentCategory;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -63,10 +64,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        // is_defaultが1のデフォルトカテゴリを取得
+        $defaultCategories = ParentCategory::where('is_default', 1)->get();
+
+        if ($defaultCategories->isNotEmpty()) {
+            // 新しいユーザーに関連付けるためにデフォルトのカテゴリをコピーし、user_idを更新
+            foreach ($defaultCategories as $defaultCategory) {
+                $newCategory = $defaultCategory->replicate();
+                $newCategory->user_id = $user->id;
+                $newCategory->save();
+            }
+            
+        }
+
+        return $user;
     }
 }

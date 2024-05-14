@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Calendar\CalendarView;
+// use App\Models\Post;
+// use App\Models\user;
 
 class HomeController extends Controller
 {
@@ -21,8 +24,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
+
+    private $post;
+    private $user;
+
+    // public function __construct(Post $post, User $user) {
+    //     $this->post = $post;
+    //     $this->user = $user;
+    // }
+
+    public function index(Request $request) {
+
+        $calendar = new CalendarView(time());
+        return view('calendars.home', [
+			"calendar" => $calendar
+		]);
+        
     }
 }

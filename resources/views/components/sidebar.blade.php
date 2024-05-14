@@ -8,7 +8,7 @@
             </div>
             <div class="outer" id="calendar">
                 <div class="inner">
-                    <a href="{{ route('users.home') }}" class="py-1 active text-decoration-none color-Letter">
+                    <a href="#" class="py-1 active text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold">Calendar</p>
                     </a>
                 </div>
@@ -80,7 +80,7 @@
             </div>
             <div class="outer" id="entry">
                 <div class="inner">
-                    <a href="{{ route('users.posts.new') }}" class="py-1 border-bottom text-decoration-none color-Letter">
+                    <a href="#" class="py-1 border-bottom text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold">Entry</p>
                     </a>
                 </div>
