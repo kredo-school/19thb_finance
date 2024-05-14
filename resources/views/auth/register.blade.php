@@ -92,7 +92,7 @@
                                     {{ __('I already have an account') }}
                                 </a>
     
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="#">
+                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ url('/privacyandterms') }}">
                                     {{ __('Privacy & Terms') }}
                                 </a>
                             </div>
