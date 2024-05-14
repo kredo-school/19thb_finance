@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     // add class
-    if(pathname.includes('home')) {
+    if(pathname.includes('home') || pathname.includes('wishlists')) {
       const calendar = document.getElementById('calendar');
       calendar.classList.add('active');
     }
-    if(pathname.includes('posts/new')) {
+    if(pathname.includes('transactions')) {
       const entry = document.getElementById('entry');
       entry.classList.add('active');
     }
