@@ -4,7 +4,7 @@
         <!-- logo -->
         <div class="col-md-2 footer-logo">
             <a class="d-flex align-items-center mx-auto" href="#" style="max-width: 70px; height: 80px;">
-                <img src="images/footer-pig-logo.png" alt="" class="img-fluid">
+                <img src="{{ asset('images/footer-pig-logo.png') }}" alt="" class="img-fluid">
             </a>
         </div>
 

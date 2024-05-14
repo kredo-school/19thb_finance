@@ -9,27 +9,38 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParentCategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PremiumController;
+use App\Http\Controllers\WishlistsController;
+use App\Http\Controllers\TransactionsController;
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+
+Route::get('/faq', function () {
+    return view('contacts.faq');
 });
 
+Route::get('/inquiry', function () {
+    return view('contacts.inquiry');
+});
+
+Route::get('/aboutUs', function () {
+    return view('contacts.aboutUs');
+});
+
+
+# Premium
 Route::get('/premium', function () {
     return view('premium');
 });
 
-Route::get('/cheatlogin', function () {
-    return view('cheatlogin');
-});
+Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 
+
+# Privacy & Terms
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
@@ -52,6 +63,18 @@ Route::group(['middleware' => 'auth'], function() {
     Route::patch('/category/{parent_category_id}/child/{child_category_id}/update', [ChildCategoryController::class, 'update'])->name('category.child.update');
     Route::delete('/category/{parent_category_id}/child/{child_category_id}/destroy', [ChildCategoryController::class, 'destroy'])->name('category.child.destroy');
 
+    // Home
+    Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
+
+    // Wishlists 
+    Route::get('/wishlists', [WishlistsController::class, 'show'])->name('calendars.wishlists.show');
+    Route::get('/wishlists/new', [WishlistsController::class, 'new'])->name('calendars.wishlists.new');
+    Route::get('/wishlists/edit', [WishlistsController::class, 'edit'])->name('calendars.wishlists.edit');
+
+    // Transactions
+    Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
+
+
     // Analysis
     Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');
     Route::get('/analysis/category', [AnalysisController::class, 'category'])->name('analysis.category');
@@ -60,3 +83,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/analysis/cashflow', [AnalysisController::class, 'cashflow'])->name('analysis.cashflow');
     Route::get('/analysis/people', [AnalysisController::class, 'people'])->name('analysis.people');
 });
+
