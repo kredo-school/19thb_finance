@@ -21,11 +21,11 @@
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-bold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="#">{{ __('FAQ') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="#">{{ __('FAQ') }}</a>
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-bold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('Inquiry Form') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('Inquiry Form') }}</a>
             </div>
 
             <div class="row mx-1 mb-2 position-absolute bottom-0 end-0">
