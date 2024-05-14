@@ -1,4 +1,5 @@
 const ctxCashflow = document.getElementById('cashflowChart').getContext('2d');
+
 const cashflowChart = new Chart(ctxCashflow, {
     type: "bar",
     data: {
@@ -6,7 +7,7 @@ const cashflowChart = new Chart(ctxCashflow, {
         datasets: [
             {
                 type: "line",
-                label: "Cashflow",
+                label: "Balance",
                 data: [100, 200, 350, -100, 200, 400, 300, -200, 100, 200, -150, 200],
                 borderColor: [
                     "rgba(255, 215, 10, 1)",
@@ -44,7 +45,8 @@ const cashflowChart = new Chart(ctxCashflow, {
         },
         plugins: {
             legend: {
-                display: false,
+                display: true,
+                position: 'right',
             },
         }
     },

@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function parentCategories() {
         return $this->hasMany(ParentCategory::class);
     }
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
 }

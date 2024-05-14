@@ -21,7 +21,11 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            UserSeeder::class,
             ParentCategorySeeder::class,
+            ChildCategorySeeder::class,
+            PeopleSeeder::class,
+            TransactionSeeder::class,
         ]);
     }
 }
