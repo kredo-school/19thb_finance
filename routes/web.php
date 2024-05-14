@@ -8,6 +8,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParentCategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WishlistsController;
+use App\Http\Controllers\TransactionsController;
+
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,11 +28,6 @@ Route::get('/cheatlogin', function () {
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
@@ -50,4 +49,16 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/category/{parent_category_id}/child/{child_category_id}/edit', [ChildCategoryController::class, 'edit'])->name('category.child.edit');
     Route::patch('/category/{parent_category_id}/child/{child_category_id}/update', [ChildCategoryController::class, 'update'])->name('category.child.update');
     Route::delete('/category/{parent_category_id}/child/{child_category_id}/destroy', [ChildCategoryController::class, 'destroy'])->name('category.child.destroy');
+
+    // Home
+    Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
+
+    // Wishlists 
+    Route::get('/wishlists', [WishlistsController::class, 'show'])->name('calendars.wishlists.show');
+    Route::get('/wishlists/new', [WishlistsController::class, 'new'])->name('calendars.wishlists.new');
+    Route::get('/wishlists/edit', [WishlistsController::class, 'edit'])->name('calendars.wishlists.edit');
+
+    // Transactions
+    Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
+
 });
