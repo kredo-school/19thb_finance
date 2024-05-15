@@ -13,12 +13,15 @@ class ReportController extends Controller
 
     public function store(Request $request) {
         $validated = $request->validate([
+            'name' => 'required|max:30',
+            'email' => 'required|max:30',
             'subject' => 'required|max:30',
-            'details' => 'required',
+            'details' => 'required|max:600',
         ]);
 
+        $validated['user_id'] = auth()->id();
+
         $report = Report::create($validated);
-        // $this->report->user_id = Auth::user()->id;
         return back()->with('message', 'Thank you for your inquiry!');
     }
 }

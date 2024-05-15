@@ -48,4 +48,9 @@ class User extends Authenticatable
     public function parentCategories() {
         return $this->hasMany(ParentCategory::class);
     }
+
+    // inquiry
+    public function reports() {
+        return $this->hasMany(Report::class);
+    }
 }

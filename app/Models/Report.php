@@ -9,7 +9,15 @@ class Report extends Model
 {
     use HasFactory;
 
-    protected $guarded = [
-        'id',
+    protected $fillable = [
+        'name',
+        'email',
+        'subject',
+        'details',
+        'user_id',
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

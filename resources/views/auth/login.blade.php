@@ -88,7 +88,7 @@
                                     {{ __('Create an Account') }}
                                 </a>
 
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-start d-block" href="#">
+                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-start d-block" href="{{ url('/privacyandterms') }}">
                                     {{ __('Privacy & Terms') }}
                                 </a>
                             </div>
