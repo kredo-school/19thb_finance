@@ -34,7 +34,7 @@
             </div>
             @endforeach
 
-            <div class="mb-2">
+            <div class="text-secondary mb-2">
                 {{ $reports->links() }}
             </div>
         </div>
