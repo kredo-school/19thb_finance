@@ -189,7 +189,7 @@ class AnalysisController extends Controller
                                         'monthly_labels' => $monthlyLabels,
                                         'monthly_amounts' => $monthlyAmounts,
                                     ];
-                                })->sortByDesc('total_amount');   
+                                })->sortByDesc('total_amount');
 
                                 $childLabels = $childCategories->pluck('name')->toArray();
                                 $childAmounts = $childCategories->pluck('total_amount')->toArray();
@@ -278,6 +278,8 @@ class AnalysisController extends Controller
     }
 
     public function cashflow() {
+        
+
         return view('analysis.cashflow');
     }
 

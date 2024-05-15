@@ -17,11 +17,11 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row mb-2">
-                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="#">{{ __('About Us') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="#">{{ __('FAQ') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="{{ route('faq') }}">{{ __('FAQ') }}</a>
             </div>
 
             <div class="row mb-2">
@@ -109,7 +109,7 @@
                                     {{ __('Send') }}
                                 </button>
                                 @if (session('message'))
-                                    <div class="fw-bold color4 mt-1">
+                                    <div class="fw-semibold color4 mt-1">
                                         {{ session('message') }}
                                     </div>
                                 @endif

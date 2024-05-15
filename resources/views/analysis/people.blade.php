@@ -3,7 +3,7 @@
 @section('content')
 
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">
+    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: rgba(247, 160, 114, 0.2);">
         @include('components.sidebar')
     </aside>
     <article class="col-9 mt-4">
@@ -37,7 +37,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col p-4">
+                <div class="col-9 p-4">
                     <div class="card">
                         <div class="card-header"  style="background-color: rgba(220, 53, 69, 0.5);">
                             <h6 class="m-0">House</h6>

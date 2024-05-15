@@ -3,7 +3,7 @@
 @section('content')
 
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">
+    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: rgba(247, 160, 114, 0.2);">
         @include('components.sidebar')
     </aside>
     <article class="col mt-4">
@@ -99,7 +99,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col p-5">
+                <div class="col-9 p-5">
                     @foreach ($parentCategories as $parentCategory)
                         @if ($parentCategory['id'] == $parent_category_id)
                             <div class="card mb-3">
