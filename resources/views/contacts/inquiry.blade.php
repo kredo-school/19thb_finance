@@ -17,15 +17,15 @@
     <div class="row justify-content-center">
         <div class="col-md-auto position-relative">
             <div class="row mb-2">
-                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="max-width: 150px;" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-4 px-3 py-1" style="max-width: 160px;" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
             </div>
 
             <div class="row mb-2">
-                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-3 px-3 py-1" style="letter-spacing: .1rem; max-width: 150px;" href="{{ route('faq') }}">{{ __('FAQ') }}</a>
+                <a class="h4 fw-semibold text-secondary btn border border-3 rounded-3 shadow mx-4 px-3 py-1" style="letter-spacing: .1rem; max-width: 160px;" href="{{ route('faq') }}">{{ __('FAQ') }}</a>
             </div>
 
             <div class="row mb-2">
-                <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-1" style="max-width: 150px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
+                <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-4 px-3 py-1" style="max-width: 160px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Form') }}</p>
             </div>
 
             <div class="row mx-3 mb-2 position-absolute bottom-0 end-0">
