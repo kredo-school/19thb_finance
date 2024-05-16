@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AnalysisController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ChildCategoryController;
@@ -46,6 +47,7 @@ Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
 Route::get('/faq', [FaqController::class, 'create'])->name('faq');
 Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
 Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
+Route::get('/report', [ReportController::class, 'index']);
 
 Route::group(['middleware' => 'auth'], function() {
     // Category
@@ -73,5 +75,13 @@ Route::group(['middleware' => 'auth'], function() {
     // Transactions
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
 
+
+    // Analysis
+    Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');
+    Route::get('/analysis/category', [AnalysisController::class, 'category'])->name('analysis.category');
+    Route::get('/analysis/category/parent/{parent_category_id}', [AnalysisController::class, 'parent'])->name('analysis.category.parent');
+    Route::get('/analysis/category/parent/{parent_category_id}/child/{child_category_id}', [AnalysisController::class, 'child'])->name('analysis.category.child');
+    Route::get('/analysis/cashflow', [AnalysisController::class, 'cashflow'])->name('analysis.cashflow');
+    Route::get('/analysis/people', [AnalysisController::class, 'people'])->name('analysis.people');
 });
 

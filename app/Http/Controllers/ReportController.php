@@ -24,4 +24,10 @@ class ReportController extends Controller
         $report = Report::create($validated);
         return back()->with('message', 'Thank you for your inquiry!');
     }
+
+    public function index() {
+        // $reports = Report::all();
+        $reports = Report::paginate(4);
+        return view('contacts.index', compact('reports'));
+    }
 }

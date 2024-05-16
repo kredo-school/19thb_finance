@@ -1,15 +1,23 @@
 @extends('layouts.app')
     
 @section('content')
-    <div class="container">
-        <h2 class="h1 text-center fw-bold my-3">2024 Mar</h2>
 
-        <div>
-            <canvas id="cashflowChart"></canvas>
+<main class="row container mx-auto">
+    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: rgba(247, 160, 114, 0.2);">
+        @include('components.sidebar')
+    </aside>
+    <article class="col-9 mt-4">
+        <div class="container">
+            <h2 class="h1 text-center fw-bold">2024 Mar</h2>
+    
+            <div class="bg-white shadow rounded m-4 p-4">
+                <canvas id="cashflowChart"></canvas>
+            </div>
+    
         </div>
+    </article>
+</main>
 
-    </div>
-
-    <script src="{{ asset('js/cashflowchart.js') }}"></script>
+    <script src="{{ asset('js/analysis/cashflowchart.js') }}"></script>
     
 @endsection

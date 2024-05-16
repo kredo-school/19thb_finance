@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ChildCategory;
 use App\Models\ParentCategory;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -70,17 +71,21 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        // is_defaultが1のデフォルトカテゴリを取得
-        $defaultCategories = ParentCategory::where('is_default', 1)->get();
+        $defaultParentCategories = ParentCategory::where('is_default', 1)->get();
 
-        if ($defaultCategories->isNotEmpty()) {
-            // 新しいユーザーに関連付けるためにデフォルトのカテゴリをコピーし、user_idを更新
-            foreach ($defaultCategories as $defaultCategory) {
-                $newCategory = $defaultCategory->replicate();
-                $newCategory->user_id = $user->id;
-                $newCategory->save();
+        if ($defaultParentCategories->isNotEmpty()) {
+            foreach ($defaultParentCategories as $defaultParentCategory) {
+                $newParentCategory = $defaultParentCategory->replicate();
+                $newParentCategory->user_id = $user->id;
+                $newParentCategory->save();
+
+                $defaultChildCategories = $defaultParentCategory->childCategories()->where('is_default', 1)->get();
+                foreach ($defaultChildCategories as $defaultChildCategory) {
+                    $newChildCategory = $defaultChildCategory->replicate();
+                    $newChildCategory->parent_category_id = $newParentCategory->id;
+                    $newChildCategory->save();
+                }
             }
-            
         }
 
         return $user;

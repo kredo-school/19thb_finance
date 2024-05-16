@@ -19,7 +19,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/transaction.js', 'resources/js/sidebar.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/transaction.js', 'resources/js/sidebar.js',
+        'resources/js/analysischart.js'
+    ])
 
     {{-- Chart.js --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
