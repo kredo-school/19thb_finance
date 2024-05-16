@@ -47,6 +47,7 @@ Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
 Route::get('/faq', [FaqController::class, 'create'])->name('faq');
 Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
 Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
+Route::get('/report', [ReportController::class, 'index']);
 
 Route::group(['middleware' => 'auth'], function() {
     // Category
