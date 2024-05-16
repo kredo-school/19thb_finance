@@ -74,7 +74,11 @@
                     </div>
 
                     <div class="row mx-0">
-                        <div class="bg-color-Rainbow" style="height: 140px;"></div>
+                        {{-- <div class="bg-color-Rainbow" style="height: 140px;"></div> --}}
+                        <div id="map"></div>
+                        {{-- <gmp-map center="35.71015548706055,139.80955505371094" zoom="14" map-id="DEMO_MAP_ID">
+                        <gmp-advanced-marker position="35.71015548706055,139.80955505371094" title="My location"></gmp-advanced-marker>
+                        </gmp-map> --}}
                     </div>
                 </div>
             </div>
@@ -82,4 +86,8 @@
         <div class="col-md-auto"></div>
     </div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnarELUH_tcoAUGg6pLxho5piihVR_js&callback=initMap" async defer></script>
+{{-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=console.debug&libraries=maps,marker&v=beta">
+</script> --}}
+<script src="{{ asset('js/aboutUs.js') }}"></script>
 @endsection
