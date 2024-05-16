@@ -21,15 +21,25 @@
             @foreach ($reports as $report)
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
-                    <p>
-                        {{ $report->name }} / {{ $report->user_id }} / {{ $report->user->name }}
+                    <p class="mb-1">
+                        Name: {{ $report->name }}
                     </p>
-                    <p>{{ $report->email }}</p>
-                    <p>
-                        {{ $report->subject}} / {{ $report->created_at }}
+                    <p class="mb-1">
+                        Registered name: {{ $report->user->name }} / User id: {{ $report->user_id }}
                     </p>
-                    <hr class="w-100">
-                    <p>{{ $report->details }}</p>
+                    <p>
+                        Email: {{ $report->email }}
+                    </p>
+                    <p class="mb-1">
+                        Subject: {{ $report->subject}}
+                    </p>
+                    <p class="mb-1">
+                        {{ $report->created_at }}
+                    </p>
+                    <hr class="w-100 mt-0">
+                    <p>
+                        Details: {{ $report->details }}
+                    </p>
                 </div>
             </div>
             @endforeach
