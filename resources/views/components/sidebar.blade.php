@@ -24,7 +24,7 @@
                 </div>
                 <div class="outer">
                     <div class="inner">
-                        <a href="#" class="py-1 text-decoration-none color-Letter">
+                        <a href="{{ route('analysis.summary') }}" class="py-1 text-decoration-none color-Letter">
                             <p class="py-1 px-3 m-0 fw-bold">Analisys</p>
                         </a>
                     </div>
@@ -34,36 +34,36 @@
                 <div class="border-color-Letter py-3 mt-1" style="width: 16px;"></div>
                 <ul class="detail-link ps-2 mt-2">
                     <li class="nav-item">
-                        <div class="outer">
+                        <div class="outer" id="analysisSummary">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('analysis.summary') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 mx-auto fw-medium color-Letter">Summary</p>
                                 </a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div class="outer">
+                        <div class="outer" id="categoryAnalysis">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('analysis.category') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Category Analysis</p>
                                 </a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div class="outer">
+                        <div class="outer" id="cashflowAnalysis">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('analysis.cashflow') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Cashflow Analysis</p>
                                 </a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div class="outer">
+                        <div class="outer" id="peopleAnalysis">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('analysis.people') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">People Analysis</p>
                                 </a>
                             </div>
@@ -119,9 +119,9 @@
                 <div class="border-color-Letter py-3 mt-1" style="width: 16px;"></div>
                 <ul class="detail-link ps-2 my-2">
                     <li class="nav-item fw-medium">
-                        <div class="outer">
+                        <div class="outer" id="editCategory">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('category.show') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Category</p>
                                 </a>
                             </div>

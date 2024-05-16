@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  color: #343A40 !important;
 }
 
 /* font color */
@@ -530,7 +531,7 @@ color: #fff;
   display: block;
   width: 0;
   height: 0;
-  left: 150px;
+  left: 120px;
   top: -30px;
   border-right: 50px solid transparent;
   border-bottom: 30px solid #F8FAFC;
@@ -538,6 +539,9 @@ color: #fff;
 }
 
 /* icon color filter */
+.filter-bg-color {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(1475%) hue-rotate(26deg) brightness(127%) contrast(94%);
+}
 .filter-2FCC71 {
   filter: brightness(0) saturate(100%) invert(66%) sepia(45%) saturate(626%) hue-rotate(92deg) brightness(89%) contrast(98%);
 }
