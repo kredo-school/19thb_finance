@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
             datasets: [{
                 data: expenseAmounts,
                 backgroundColor: expenseColors,
+                borderColor: '#F7F3EB',
+                borderWidth: 0.5,
             }]
         },
         options: {
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
     // Child Doughnut Chart
     const childDataElements = document.querySelectorAll('.childData');
 
@@ -128,17 +131,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+});
+
+    
+document.addEventListener("DOMContentLoaded", function() {
+
+    const cashflowDataElement = document.getElementById('cashflowData');
+    const cashflowLabels = JSON.parse(cashflowDataElement.getAttribute('data-cashflowLabels'));
+    const cashflowIncome = JSON.parse(cashflowDataElement.getAttribute('data-cashflowIncome'));
+    const cashflowExpense = JSON.parse(cashflowDataElement.getAttribute('data-cashflowExpense'));
+    const cashflowBalance = JSON.parse(cashflowDataElement.getAttribute('data-cashflowBalance'));
+
     const ctxCashflow = document.getElementById('cashflowChart').getContext('2d');
 
     const cashflowChart = new Chart(ctxCashflow, {
         type: "bar",
         data: {
-            labels: ["4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3"],
+            labels: cashflowLabels,
             datasets: [
                 {
                     type: "line",
                     label: "Balance",
-                    data: [100, 200, 350, -100, 200, 400, 300, -200, 100, 200, -150, 200],
+                    data: cashflowBalance,
                     borderColor: [
                         "rgba(255, 215, 10, 1)",
                     ],
@@ -150,14 +164,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 {
                     label: "Income",
-                    data: [500, 500, 500, 500, 500, 600, 600, 600, 600, 600, 600, 600],
+                    data: cashflowIncome,
                     backgroundColor: [
                         "rgba(34, 124, 157, 0.5)",
                     ],
                 },
                 {
                     label: "Expense",
-                    data: [-500, -500, -500, -500, -500, -600, -600, -600, -600, -600, -600, -600],
+                    data: cashflowExpense,
                     backgroundColor: [
                         "rgba(255, 99, 132, 0.5)",
                     ],
@@ -168,12 +182,37 @@ document.addEventListener("DOMContentLoaded", function() {
             scales: {
                 x: {
                     stacked: true,
+                    grid: {
+                        display: false
+                    },
                 },
                 y: {
                     stacked: true
                 }
             },
             plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+    
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += context.parsed.y.toLocaleString();
+                            }
+                            
+                            if (context.dataset.type === 'line') {
+                                const income = context.chart.data.datasets[1].data[context.dataIndex];
+                                const expense = -context.chart.data.datasets[2].data[context.dataIndex];
+                                label += ' [ Income: ' + income.toLocaleString() + ' - Expense: ' + expense.toLocaleString() + ' ]';
+                            }
+    
+                            return label;
+                        }
+                    }
+                },
                 legend: {
                     display: true,
                     position: 'right',
@@ -182,51 +221,92 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 
-    const ctxPeople = document.getElementById('peopleChart').getContext('2d');
-    const peopleChart = new Chart(ctxPeople, {
-        type: "line",
-        data: {
-            labels: ["4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3"],
-            datasets: [
-                {
-                    label: "Money Juo", 
-                    data: [500, 300, 500, 500, 400, 600, 300, 600, 500, 600, 800, 600],
-                    borderColor: [
-                        "rgba(255, 99, 132, 1)",
-                    ],
-                    backgroundColor: [
-                        "rgba(255, 99, 132, 1)",
-                    ],
-                    pointRadius: 5,
-                    pointHoverRadius: 10
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // People Doughnut Chart
+    const peopleDataElements = document.querySelectorAll('.peopleData');
+
+    peopleDataElements.forEach(function(peopleDataElement) {
+        const peopleLabels = JSON.parse(peopleDataElement.getAttribute('data-peopleLabels'));
+        const peopleColors = JSON.parse(peopleDataElement.getAttribute('data-peopleColors'));
+        const peopleAmounts = JSON.parse(peopleDataElement.getAttribute('data-peopleAmounts'));
+
+        const ctx = peopleDataElement.previousElementSibling.getContext('2d');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: peopleLabels,
+                datasets: [{
+                    data: peopleAmounts,
+                    backgroundColor: peopleColors, 
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
                 },
-                {
-                    label: "Money Juo", 
-                    data: [200, 500, 600, 700, 400, 100, 0, 300, 100, 800, 500, 200],
-                    borderColor: [
-                        "rgba(54, 162, 235, 1)",
-                    ],
-                    backgroundColor: [
-                        "rgba(54, 162, 235, 1)",
-                    ],
-                    pointRadius: 5,
-                    pointHoverRadius: 10
+            },
+        });
+    });
+
+
+    const parentCategoryElements = document.querySelectorAll('.parentCategory');
+
+    parentCategoryElements.forEach(function(parentCategoryElement) {
+        const personDataElements = parentCategoryElement.querySelectorAll('.personData');
+        const datasets = [];
+
+        personDataElements.forEach(function(personDataElement) {
+            const personName = JSON.parse(personDataElement.getAttribute('data-personName'));
+            const personColors = JSON.parse(personDataElement.getAttribute('data-personColors'));
+            const personAmounts = JSON.parse(personDataElement.getAttribute('data-personAmounts'));
+
+            // データセットオブジェクトの作成
+            const dataset = {
+                label: personName,
+                data: personAmounts,
+                borderColor: personColors,
+                backgroundColor: personColors,
+                pointRadius: 5,
+                pointHoverRadius: 10
+            };
+
+            datasets.push(dataset);
+        });
+
+        const personLabels = JSON.parse(personDataElements[0].getAttribute('data-personLabels'));
+        const ctx = parentCategoryElement.querySelector('.personChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: personLabels,
+                datasets: datasets
+            },
+            options: {
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        },
+                    },
+                    y: {
+                        scaleShowables: false,
+                    }
                 },
-            ],
-        },
-        options: {
-            scales: {
-                x: {
-                    beginAtZero: true,
-                },
-                y: {
-                    scaleShowables: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
                 }
             },
-            plugins: {
-                legend: {
-                    display: false,
-                },
-            }
-        },
+        });
     });
+
+});
