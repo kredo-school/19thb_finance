@@ -383,6 +383,15 @@ table thead .t2 {
   pointer-events: none;
   content: " ";
 } */
+.fukidashi_child:before {
+  content: "";
+  position: absolute;
+  top: -46px;
+  left: 20px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid white;
+}
+ 
 .COMP-form:hover + .fukidashi {
   display: block !important;
 }

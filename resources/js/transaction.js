@@ -8,9 +8,61 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function updateSelected(button) {
-    var click = button.getAttribute('data-id');
-    document.getElementById('selected').value = click;
+
+// open child_category
+
+
+// open child_category
+// document.addEventListener('DOMContentLoaded', () => {
+//   const change = document.getElementById('open');
+//   console.log(open);
+//   const list = document.getElementById("category_child");
+//   console.log(category_child);
+//   change.addEventListener("click",function(){
+//    list.classList.toggle("hidden")
+//   });
+// });
+
+
+
+function GethashID(hashIDName) {
+  if (hashIDName) {
+      var tabLinks = document.querySelectorAll('.tab li a');
+      tabLinks.forEach(function(link) {
+          var idName = link.getAttribute('href');
+          if (idName === hashIDName) {
+              var tabItems = document.querySelectorAll('.tab li');
+              tabItems.forEach(function(item) {
+                  item.classList.remove("active");
+              });
+              var areas = document.querySelectorAll(".area");
+              areas.forEach(function(area) {
+                  area.classList.remove("is-active");
+              });
+              document.querySelector(hashIDName).classList.add("is-active");
+          }
+      });
+  }
+}
+
+var tabLinks = document.querySelectorAll('.tab a');
+tabLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+      var idName = this.getAttribute('href');
+      GethashID(idName);
+      event.preventDefault();
+  });
+});
+
+
+
+// category select
+function showCategory(parent) {
+  document.getElementById('child').innerHTML = parent.innerHTML;
+}
+
+function updateSelected(child) {
+  document.getElementById('selected').value = child.innerHTML;
 }
 
 
