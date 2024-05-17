@@ -14,7 +14,9 @@ use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
 
-Auth::routes();
+Route::get('/', function () {
+    return view('welcome');
+});
 
 # Premium
 Route::get('/premium', function () {
@@ -27,6 +29,8 @@ Route::post('/update-payment', [PremiumController::class, 'update'])->name('upda
 Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
+
+Auth::routes();
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
