@@ -10,7 +10,6 @@ use App\Http\Controllers\ParentCategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
-use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
 
