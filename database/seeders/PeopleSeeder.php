@@ -32,6 +32,27 @@ class PeopleSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'name' => 'Son1',
+                'user_id' => 1,
+                'color_hex' => '0FA3B1',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Son2',
+                'user_id' => 1,
+                'color_hex' => 'F7A072',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Daughter',
+                'user_id' => 1,
+                'color_hex' => 'FFD70A',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ];
 
         $this->person->insert($people);

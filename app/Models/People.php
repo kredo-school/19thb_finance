@@ -9,6 +9,7 @@ class People extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $table = 'people';
     protected $fillable = [
         'user_id',
@@ -23,3 +24,9 @@ class People extends Model
         return $this->belongsTo(User::class);
     }
 }
+=======
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
+}
+>>>>>>> main

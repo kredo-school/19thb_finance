@@ -83,5 +83,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/analysis/category/parent/{parent_category_id}/child/{child_category_id}', [AnalysisController::class, 'child'])->name('analysis.category.child');
     Route::get('/analysis/cashflow', [AnalysisController::class, 'cashflow'])->name('analysis.cashflow');
     Route::get('/analysis/people', [AnalysisController::class, 'people'])->name('analysis.people');
+    Route::get('/analysis/people/{parent_category_id}/person/', [AnalysisController::class, 'person'])->name('analysis.people.person');
 });
 
