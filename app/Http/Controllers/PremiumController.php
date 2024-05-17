@@ -58,5 +58,10 @@ class PremiumController extends Controller
             return back()->withInput()->withErrors(['error' => 'Error updating Payment info. Please try again.']);
         }
     }
+
+    public function show() 
+    {
+        return view('modal.modal_premium');
+    }
 }
 
