@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WishlistsController extends Controller
+class WishlistController extends Controller
 {
     // private $wish;
 
@@ -14,7 +14,7 @@ class WishlistsController extends Controller
     // }
 
     // new
-    public function new (Request $request) {
+    public function create (Request $request) {
         return view('calendars.wishlists.new');
     }
 

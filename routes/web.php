@@ -12,22 +12,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\WishlistController;
 
 Auth::routes();
-
-
-Route::get('/faq', function () {
-    return view('contacts.faq');
-});
-
-Route::get('/inquiry', function () {
-    return view('contacts.inquiry');
-});
-
-Route::get('/aboutUs', function () {
-    return view('contacts.aboutUs');
-});
-
 
 # Premium
 Route::get('/premium', function () {
@@ -35,7 +22,6 @@ Route::get('/premium', function () {
 });
 
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
-
 
 # Privacy & Terms
 Route::get('/privacyandterms', function () {
@@ -67,10 +53,11 @@ Route::group(['middleware' => 'auth'], function() {
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
 
-    // Wishlists 
-    Route::get('/wishlists', [WishlistsController::class, 'show'])->name('calendars.wishlists.show');
-    Route::get('/wishlists/new', [WishlistsController::class, 'new'])->name('calendars.wishlists.new');
-    Route::get('/wishlists/edit', [WishlistsController::class, 'edit'])->name('calendars.wishlists.edit');
+    // Wishlists
+    Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
+    Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.new.store');
+    Route::get('/wishlists', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
+    Route::get('/wishlists/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
 
     // Transactions
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
