@@ -6,15 +6,15 @@
     <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: rgba(247, 160, 114, 0.2);">
         @include('components.sidebar')
     </aside>
-    <article class="col-9 mt-4">
+    <article class="col mt-4">
         <div class="container">
-            <h2 class="h1 text-center fw-bold my-3">{{ date('Y') }} {{ substr(date('F'), 0, 3) }}</h2>
+            <h2 class="h1 text-center fw-bold">{{ date('Y') }} {{ substr(date('F'), 0, 3) }}</h2>
     
             <div class="row justify-content-center mb-5">
-                <div class="card bg-white shadow border-0 rounded-4 mt-3" style="width: 500px;">
+                <div class="card bg-white shadow border-0 rounded-4 mt-3 w-auto">
                     <div class="card-body p-3">
                         <div class="table-responsive">
-                            <table class="table table-borderless text-center mb-0">
+                            <table class="table table-borderless text-center text-nowrap mb-0">
                                 <thead>
                                     <th class="text-secondary bg-white">Income</th>
                                     <th class="bg-white"></th>
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-4 position-relative" style="height: 350px;">
                     <div class="z-0 position-absolute top-50 start-50 translate-middle">
-                        <h3 class="h5 fw-bold text-secondary">Expense</h3>
+                        <h3 class="h5 fw-bold text-center text-secondary">Expense</h3>
                         <h4 class="fw-bold" style="color: #FE6D73;">¥{{ number_format(floor($totalExpenseAmount)) }}</h4>
                     </div>
                     <div class="z-1 position-absolute top-50 start-50 translate-middle">
@@ -74,7 +74,5 @@
         </div>
     </article>
 </main>
-
-    <script src="{{ asset('js/analysis/summarychart.js') }}"></script>
     
 @endsection
