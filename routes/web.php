@@ -58,8 +58,9 @@ Route::group(['middleware' => 'auth'], function() {
 
     // Wishlists
     Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
-    Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.new.store');
-    Route::get('/wishlists', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
+    Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.store');
+    Route::get('/wishlists', [WishlistController::class, 'index'])->name('calendars.wishlists.show');
+    // Route::get('/wishlists/{wishlist}', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
     Route::get('/wishlists/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
 
     // Transactions

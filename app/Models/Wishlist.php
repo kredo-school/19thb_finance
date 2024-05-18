@@ -14,4 +14,8 @@ class Wishlist extends Model
         'budget',
         'user_id',
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -14,12 +14,12 @@
             <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
             <div class="card mt-4 py-5 px-5 border-0 shadow-sm">
-
+                @foreach ($wishlists as $wishlist)
                 <!-- Title -->
                 <div class="content p-3 position-relative">
                     <div>
                         <p class="h5 fw-bold color-Muted text-start">Title</p>
-                        <p class="h4 fw-bold">new Nike shoes</p>
+                        <p class="h4 fw-bold">{{ $wishlist->title }}</p>
                     </div>
 
                     <a href="{{ route('calendars.wishlists.edit') }}" class="position-absolute btn-main-reverse px-3 text-decoration-none">edit</a>
@@ -29,7 +29,7 @@
                 <div class="content pt-0 pb-4 px-3">
                     <div>
                         <p class="h5 fw-bold color-Muted text-start">Budget</p>
-                        <p class="h4 fw-bold">35,000yen</p>
+                        <p class="h4 fw-bold">{{ $wishlist->budget }} yen</p>
                     </div>
                 </div>
 
@@ -42,6 +42,7 @@
                         <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
                     </div>
                 </a>
+                @endforeach
                 
                 <!-- <div class="row">
                     <p class="fs-6 fw-bold color-Muted mb-0">Company Name</p>
