@@ -16,4 +16,8 @@ class Transaction extends Model
     public function childCategory() {
         return $this->belongsTo(ChildCategory::class);
     }
+
+    public function person() {
+        return $this->belongsTo(People::class);
+    }
 }

@@ -94,7 +94,7 @@
             </div>
             <div class="outer" id="side_profile">
                 <div class="inner">
-                    <a href="#" class="py-1 border-bottom text-decoration-none color-Letter">
+                    <a href="{{ route('profile.show') }}" class="py-1 border-bottom text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold fw-bold">Profile</p>
                     </a>
                 </div>
@@ -131,7 +131,7 @@
                         <div class="outer">
                             <div class="inner">
                                 <a href="" class="text-decoration-none">
-                                    <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Account</p>
+                                    <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Profile</p>
                                 </a>
                             </div>
                         </div>
