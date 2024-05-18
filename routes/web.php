@@ -10,8 +10,11 @@ use App\Http\Controllers\ParentCategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
+use Psy\Command\EditCommand;
 
 Auth::routes();
 
@@ -35,7 +38,7 @@ Route::get('/premium', function () {
 });
 
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
-
+Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
 
 # Privacy & Terms
 Route::get('/privacyandterms', function () {
@@ -84,5 +87,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/analysis/cashflow', [AnalysisController::class, 'cashflow'])->name('analysis.cashflow');
     Route::get('/analysis/people', [AnalysisController::class, 'people'])->name('analysis.people');
     Route::get('/analysis/people/{parent_category_id}/person/', [AnalysisController::class, 'person'])->name('analysis.people.person');
-});
 
+    // Profile
+    Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/edit', [EditProfileController::class, 'show'])->name('profile.edit');
+});
