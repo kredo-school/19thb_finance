@@ -30,4 +30,8 @@ class ReportController extends Controller
         $reports = Report::paginate(4);
         return view('contacts.index', compact('reports'));
     }
+
+    public function show(Report $report) {
+        return view('contacts.show', compact('report'));
+    }
 }

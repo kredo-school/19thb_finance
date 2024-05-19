@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Inquiry Index")
+@section('title', "Inquiry Show")
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
@@ -12,13 +12,12 @@
 <div class="container my-3">
     <div class="row justify-content-center">
         <div class="row mb-2">
-            <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-2" style="max-width: 160px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Index') }}</p>
+            <p class="h5 text-secondary text-center border border-3 rounded-3 shadow bg-white bg-opacity-50 mx-3 px-3 py-2" style="max-width: 160px; border: solid 3px #F7A072 !important;">{{ __('Inquiry Show') }}</p>
         </div>
     </div>
 
     <div class="row justify-content-center">
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-1">
-            @foreach ($reports as $report)
+        <div class="row">
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
                     <p class="mb-1">
@@ -30,12 +29,9 @@
                     <p>
                         <span class="fw-semibold">Email: </span>{{ $report->email }}
                     </p>
-
+                    
                     <p class="mb-1">
-                        <span class="fw-semibold">Subject: </span>
-                        <a href="{{ route('report.show', $report) }}" class="color4 fw-semibold" style="letter-spacing: .1rem;">
-                            {{ $report->subject}}
-                        </a>
+                        <span class="fw-semibold">Subject: </span>{{ $report->subject}}
                     </p>
                     <p class="mb-1">
                         {{ $report->created_at }}
@@ -45,11 +41,6 @@
                         <span class="fw-semibold">Details: </span>{{ $report->details }}
                     </p>
                 </div>
-            </div>
-            @endforeach
-
-            <div class="text-secondary mb-2">
-                {{ $reports->links() }}
             </div>
         </div>
     </div>
