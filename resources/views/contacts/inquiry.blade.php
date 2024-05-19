@@ -68,10 +68,10 @@
                         </div>
 
                         <div class="row mb-1">
-                            <label for="inquiry subject" class="col-form-label text-md-start py-0">{{ __('Inquiry Subject') }}</label>
+                            <label for="subject" class="col-form-label text-md-start py-0">{{ __('Inquiry Subject') }}</label>
 
                             <div>
-                                <input id="inquiry subject" list="datalistOptions" class="form-control @error('inquiry subject') is-invalid @enderror" name="inquiry subject" value="{{ old('inquiry subject') }}" placeholder="&#xf0cb;" style="font-family: FontAwesome;" required>
+                                <input id="subject" list="datalistOptions" class="form-control @error('subject') is-invalid @enderror" name="subject" value="{{ old('subject') }}" placeholder="&#xf0cb;" style="font-family: FontAwesome;" required>
                                 <datalist id="datalistOptions">
                                     <option value="1. General Inquiry">
                                     <option value="2. Account-related Issue">
@@ -81,7 +81,7 @@
                                     <option value="6. Other">
                                 </datalist>
 
-                                @error('inquiry subject')
+                                @error('subject')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -90,12 +90,12 @@
                         </div>
 
                         <div class="row mb-4">
-                            <label for="message" class="col-form-label text-md-start py-0">{{ __('Message') }}</label>
+                            <label for="details" class="col-form-label text-md-start py-0">{{ __('Message') }}</label>
 
                             <div>
-                                <textarea id="message" rows="3" class="form-control @error('message') is-invalid @enderror" name="message" value="{{ old('message') }}" placeholder="&#xf27b;" style="font-family: FontAwesome;" required></textarea>
+                                <textarea id="details" rows="3" class="form-control @error('details') is-invalid @enderror" name="details" value="{{ old('details') }}" placeholder="&#xf27b;" style="font-family: FontAwesome;" required></textarea>
 
-                                @error('message')
+                                @error('details')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
