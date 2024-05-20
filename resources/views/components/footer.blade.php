@@ -13,9 +13,9 @@
             <ul class="d-sm-flex list-unstyled text-white justify-content-center mt-4 mb-0">
                 <li class="text-center px-4 mx-auto"><a class="nav-link" href="#">Home</a></li>
                 <li class="text-center px-4 mx-auto"><a class="nav-link" href="#">Service</a></li>
-                <li class="text-center px-4 mx-auto text-nowrap"><a class="nav-link" href="#">About Us</a></li>
-                <li class="text-center px-4 mx-auto"><a class="nav-link" href="#">FAQ</a></li>
-                <li class="text-center px-4 mx-auto"><a class="nav-link" href="#">Inquiry</a></li>
+                <li class="text-center px-4 mx-auto text-nowrap"><a class="nav-link" href="{{ route('aboutUs') }}">About Us</a></li>
+                <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ route('faq') }}">FAQ</a></li>
+                <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ route('inquiry') }}">Inquiry</a></li>
             </ul>
         </div>
 

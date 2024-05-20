@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Wishlist;
+use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Auth;
 
 class WishlistController extends Controller
@@ -46,7 +46,17 @@ class WishlistController extends Controller
     // }
 
     // edit
-    public function edit (Request $request) {
+    public function edit(Wishlist $wishlist) {
         return view('calendars.wishlists.edit');
+    }
+
+    public function update(Request $request, Wishlist $wishlist) {
+        $validated = $request->validate([
+            'title' => 'max:30',
+            'budget' => 'integer|max:20',
+        ]);
+
+        $validated['user_id'] = auth()->id();
+        
     }
 }
