@@ -82,6 +82,6 @@
         <div class="col-md-auto"></div>
     </div>
 </div>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDYnarELUH_tcoAUGg6pLxho5piihVR_js&language=en"></script>
+<script src="http://maps.google.com/maps/api/js?key={{ env('GOOGLE_KEY') }}&language=en"></script>
 <script src="{{ asset('js/aboutUs.js') }}"></script>
 @endsection
