@@ -10,16 +10,16 @@
     <div class="col card-wrapper mt-4 mx-auto">
 
         <div class="card-wrapper mx-auto" style="max-width: 500px;">
-            <h2 class="lh-1 fw-bold">Wish</h2>
+            <h2 class="lh-1 fw-bold">Wishes</h2>
             <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
             <div class="card mt-4 py-5 px-5 border-0 shadow-sm">
-
+                @foreach ($wishlists as $wishlist)
                 <!-- Title -->
                 <div class="content p-3 position-relative">
                     <div>
                         <p class="h5 fw-bold color-Muted text-start">Title</p>
-                        <p class="h4 fw-bold">new Nike shoes</p>
+                        <p class="h4 fw-bold">{{ $wishlist->title }}</p>
                     </div>
 
                     <a href="{{ route('calendars.wishlists.edit') }}" class="position-absolute btn-main-reverse px-3 text-decoration-none">edit</a>
@@ -29,7 +29,7 @@
                 <div class="content pt-0 pb-4 px-3">
                     <div>
                         <p class="h5 fw-bold color-Muted text-start">Budget</p>
-                        <p class="h4 fw-bold">35,000yen</p>
+                        <p class="h4 fw-bold">{{ $wishlist->budget }} yen</p>
                     </div>
                 </div>
 
@@ -42,6 +42,7 @@
                         <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
                     </div>
                 </a>
+                @endforeach
                 
                 <!-- <div class="row">
                     <p class="fs-6 fw-bold color-Muted mb-0">Company Name</p>
@@ -55,14 +56,14 @@
         </div>
 
         <div class="achivement_list">
-            <h2 class="lh-1 fw-bold">Achievement List</h2>
+            <h2 class="lh-1 fw-bold">Achievement Lists</h2>
             <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
             <div class="table-wrapper bg-color-Rainbow mt-4 mb-5 mx-auto p-1" style="width: 650px;">
                 <table class="mx-auto" style="width: 100%;">
                     <thead>
                         <th class="t1" style="width: 50%;">Title<strong class="t2"></strong></th>
-                        <th class="t1">Budge<strong class="t2"></strong></th>
+                        <th class="t1">Budget<strong class="t2"></strong></th>
                         <th>Date</th>
                     </thead>
                     <tbody class="bg-white">
