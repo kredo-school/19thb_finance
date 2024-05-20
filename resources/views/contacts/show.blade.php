@@ -20,14 +20,33 @@
         <div class="row">
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
-                    <p class="mb-1">
-                        <span class="fw-semibold">Name: </span>{{ $report->name }}
-                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-1">
+                                <span class="fw-semibold">Name: </span>{{ $report->name }}
+                            </p>
+                        </div>
+
+                        <div class="col mb-2">
+                            <form method="POST" action="#">
+                                @csrf
+                                @method('patch')
+                                <input id="status" list="datalistOptions" class="form-control @error('status') is-invalid @enderror" name="status" value="{{ old('status', $report->status) }}">
+                                <datalist id="datalistOptions">
+                                    <option value="1. New">
+                                    <option value="2. Inprogress">
+                                    <option value="3. Done">
+                                </datalist>
+                            </form>
+                        </div>
+                    </div>
                     <p class="mb-1">
                         <span class="fw-semibold">Registered name: </span>{{ $report->user->name }} / <span class="fw-semibold">User id: </span>{{ $report->user_id }}
                     </p>
                     <p>
-                        <span class="fw-semibold">Email: </span>{{ $report->email }}
+                        <span class="fw-semibold">Email: </span><a href="#" class="color4 fw-semibold">
+                            {{ $report->email }}
+                        </a>
                     </p>
                     
                     <p class="mb-1">
@@ -40,6 +59,19 @@
                     <p>
                         <span class="fw-semibold">Details: </span>{{ $report->details }}
                     </p>
+                </div>
+
+                <div class="row mb-0 p-0">
+                    <div class="mb-2">
+                        <button type="submit" class="btn btn-main fw-semibold rounded-pill w-25" style="letter-spacing: .1rem;">
+                            {{ __('Save') }}
+                        </button>
+                        @if (session('message'))
+                            <div class="fw-semibold color4 mt-1">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

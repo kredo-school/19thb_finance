@@ -37,6 +37,8 @@ Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
 Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
 Route::get('/report', [ReportController::class, 'index']);
 Route::get('/report/show/{report}', [ReportController::class, 'show'])->name('report.show');
+Route::get('/report/{report}/edit', [ReportController::class, 'edit'])->name('report.edit');
+Route::patch('/report/{report}', [ReportController::class, 'update'])->name('report.update');
 
 Route::group(['middleware' => 'auth'], function() {
     // Category

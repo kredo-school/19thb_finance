@@ -33,7 +33,7 @@
 
                     <p class="mb-1">
                         <span class="fw-semibold">Subject: </span>
-                        <a href="{{ route('report.show', $report) }}" class="color4 fw-semibold" style="letter-spacing: .1rem;">
+                        <a href="{{ route('report.show', $report) }}" class="color4 fw-semibold">
                             {{ $report->subject}}
                         </a>
                     </p>
