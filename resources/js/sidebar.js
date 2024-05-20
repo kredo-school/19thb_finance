@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const entry = document.getElementById('entry');
       entry.classList.add('active');
     }
+    // Analysis
     if(pathname.includes('analysis') && pathname.includes('summary')) {
       const entry = document.getElementById('analysisSummary');
       entry.classList.add('active');
@@ -36,11 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const entry = document.getElementById('peopleAnalysis');
       entry.classList.add('active');
     }
+    // Edit Category
     if(pathname.includes('category') && !pathname.includes('analysis')) {
       const entry = document.getElementById('editCategory');
       entry.classList.add('active');
     }
-
+    // Edit Profile
+    
+    // Edit People
+    if(pathname.includes('people')) {
+      const entry = document.getElementById('editPeople');
+      entry.classList.add('active');
+    }
   });
 
   

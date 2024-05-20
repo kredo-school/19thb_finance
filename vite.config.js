@@ -11,7 +11,8 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/transaction.js',
                 'resources/js/sidebar.js',
-                'resources/js/analysischart.js'
+                'resources/js/analysischart.js',
+                'resources/js/editPeople.js',
             ],
             refresh: true,
         }),
