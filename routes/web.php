@@ -13,25 +13,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditProfileController;
-use App\Http\Controllers\WishlistsController;
 use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\WishlistController;
 use Psy\Command\EditCommand;
 
-Auth::routes();
-
-
-Route::get('/faq', function () {
-    return view('contacts.faq');
+Route::get('/', function () {
+    return view('welcome');
 });
-
-Route::get('/inquiry', function () {
-    return view('contacts.inquiry');
-});
-
-Route::get('/aboutUs', function () {
-    return view('contacts.aboutUs');
-});
-
 
 # Premium
 Route::get('/premium', function () {
@@ -46,12 +34,17 @@ Route::get('/privacyandterms', function () {
     return view('privacyandterms');
 });
 
+Auth::routes();
+
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
 Route::get('/faq', [FaqController::class, 'create'])->name('faq');
 Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
 Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
 Route::get('/report', [ReportController::class, 'index']);
+Route::get('/report/show/{report}', [ReportController::class, 'show'])->name('report.show');
+Route::get('/report/{report}/edit', [ReportController::class, 'edit'])->name('report.edit');
+Route::patch('/report/{report}', [ReportController::class, 'update'])->name('report.update');
 
 Route::group(['middleware' => 'auth'], function() {
     // Category
@@ -71,10 +64,12 @@ Route::group(['middleware' => 'auth'], function() {
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
 
-    // Wishlists 
-    Route::get('/wishlists', [WishlistsController::class, 'show'])->name('calendars.wishlists.show');
-    Route::get('/wishlists/new', [WishlistsController::class, 'new'])->name('calendars.wishlists.new');
-    Route::get('/wishlists/edit', [WishlistsController::class, 'edit'])->name('calendars.wishlists.edit');
+    // Wishlists
+    Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
+    Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.store');
+    Route::get('/wishlists', [WishlistController::class, 'index'])->name('calendars.wishlists.show');
+    // Route::get('/wishlists/{wishlist}', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
+    Route::get('/wishlists/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
 
     // Transactions
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');

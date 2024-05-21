@@ -14,24 +14,23 @@
                     <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
                     <div class="card mt-4 py-5 px-5 border-0 shadow-sm">
-                        <form action="{{ route('calendars.home') }}" class="form text-start">
-
+                        <form method="POST" action="{{ route('calendars.wishlists.store') }}" class="form text-start">
+                            @csrf
                             <!-- Title -->
                             <div class="COMP-form input-group border-bottom px-3 pb-2">
                                 <label for="title" class="form-label h5 fw-bold color-Letter">Title</label>
-                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" placeholder="Name...">
+                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" id="title" placeholder="Name...">
                             </div>
 
                             <!-- Budget -->
                             <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4">
-                                <label for="title" class="form-label h5 fw-bold color-Letter">Budget</label>
-                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" placeholder="0">
+                                <label for="budget" class="form-label h5 fw-bold color-Letter">Budget</label>
+                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="budget" id="budget" placeholder="0">
                             </div>
 
-                            <a href="{{ route('calendars.wishlists.show') }}" class="btn btn-main btn-lg px-5 mt-5 w-100">
+                            <button type="submit" class="btn btn-main btn-lg px-5 mt-5 w-100">
                                 <span class="pt-1 fw-bold">Add Wish</span>
-                            </a>
-
+                            </button>
                         </form>
 
                         
