@@ -22,12 +22,9 @@ Route::get('/', function () {
 });
 
 # Premium
-Route::get('/premium', function () {
-    return view('premium');
-});
-
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
+Route::get('/premium', [PremiumController::class, 'show'])->name('premium');
 
 # Privacy & Terms
 Route::get('/privacyandterms', function () {
@@ -85,7 +82,8 @@ Route::group(['middleware' => 'auth'], function() {
 
     // Profile
     Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
-    Route::get('/profile/edit', [EditProfileController::class, 'show'])->name('profile.edit');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
 
     // People
     Route::get('/people/show', [PeopleController::class, 'show'])->name('people.show');
