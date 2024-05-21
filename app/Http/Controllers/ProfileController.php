@@ -40,21 +40,18 @@ class ProfileController extends Controller
         
         // Validate the incoming request data (optional)　下の全てのデータを検証して、適切かどうかみてる
         $request->validate([
-            'name'       => 'required|string|max:50',
-            'email'      => 'required|string|max:255',
-            'icon_color_hex'  => 'required|string|max:7'
+            'name'       => 'required|string|max:255',
+            'email' => 'required|email|max:50|unique:users,email,' . Auth::user()->id,
+            'icon_color_hex'  => 'required|string|max:255'
         ]);
-    }
 
         try {
             // $user_update = new User(); // Instance
             $user_update = $this->user->findOrFail(Auth::user()->id);
-            $user_update ->name   = $request->input('name');
-            $user_update ->email   = $request->input('email');
-            $user_update ->icon_color     = $request->input('icon_color');
+            $user_update->name = $request->input('name');
+            $user_update->email = $request->input('email');
+            $user_update->icon_color_hex = $request->input('icon_color_hex');
             
-            // dd($user_update);　$（変数）の->(配列)を見たい時に使う
-
             //Below  fixed phrase
             // Save the changes
             $user_update->save();
@@ -75,20 +72,6 @@ class ProfileController extends Controller
             // Redirect back with an error message
             return back()->withInput()->withErrors(['error' => 'Error updating User info. Please try again.']);
         }
-
-    // public function update(Request $request) {
-    //     $request->validate([
-    //         'name' => 'required|min:1|max:50'
-    //     ]);
-
-    //     $user = $this->user->findOrFail(Auth::user()->id);
-    //     $user->name = $request->name;
-    //     $user->email = $request->email;
-    //     $user->icon_color_hex = $request->icon_color_hex;
-
-    //     $user->save();
-        
-    //     return redirect()->route('profile.show');
-    // }
+    }
 
 }
