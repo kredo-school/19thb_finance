@@ -45,7 +45,7 @@
                 <div class="col-lg-6 mb-4 position-relative" style="height: 350px;">
                     <div class="z-0 position-absolute top-50 start-50 translate-middle">
                         <h3 class="h5 fw-bold text-center text-secondary">Expense</h3>
-                        <h4 class="fw-bold" style="color: #FE6D73;">¥{{ number_format(floor($totalExpenseAmount)) }}</h4>
+                        <h4 class="text-center fw-bold" style="color: #FE6D73;">¥{{ number_format(floor($totalExpenseAmount)) }}</h4>
                     </div>
                     <div class="z-1 position-absolute top-50 start-50 translate-middle">
                         <canvas id="expenseChart"></canvas>
