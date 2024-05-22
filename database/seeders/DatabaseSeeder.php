@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         \App\Models\Report::factory(10)->create();
+        \App\Models\Wishlist::factory(2)->create();
 
         $this->call([
             UserSeeder::class,

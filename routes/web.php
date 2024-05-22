@@ -14,6 +14,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
+use App\Models\Wishlist;
 use Psy\Command\EditCommand;
 
 Route::get('/', function () {
@@ -64,9 +65,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
     Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.store');
     Route::get('/wishlists', [WishlistController::class, 'index'])->name('calendars.wishlists.show');
-    // Route::get('/wishlists/show/{wishlist}', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
+    // Route::get('/wishlists/{wishlist}', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
     Route::get('/wishlists/{wishlist}/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
     Route::patch('/wishlists/{wishlist}', [WishlistController::class, 'update'])->name('calendars.wishlists.update');
+    Route::delete('/wishlists/{wishlist}', [WishlistController::class, 'destroy'])->name('calendars.wishlists.destroy');
 
     // Transactions
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
