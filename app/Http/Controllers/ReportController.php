@@ -30,4 +30,26 @@ class ReportController extends Controller
         $reports = Report::paginate(4);
         return view('contacts.index', compact('reports'));
     }
+
+    public function show(Report $report) {
+        return view('contacts.show', compact('report'));
+    }
+
+    public function edit(Report $report) {
+        return view('contacts.edit', compact('report'));
+    }
+
+    public function update(Request $request, Report $report) {
+        $validated = $request->validate([
+            'name' => 'required|max:30',
+            'email' => 'required|max:30',
+            'subject' => 'required|max:30',
+            'details' => 'required|max:600',
+        ]);
+
+        $validated['user_id'] = auth()->id();
+
+        $report->update($validated);
+        return back()->with('message', 'Updated');
+    }
 }

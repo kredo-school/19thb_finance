@@ -13,7 +13,6 @@
                     </a>
                 </div>
             </div>
-            
         </li>
 
         <!-- Analisys -->
@@ -137,9 +136,9 @@
                         </div>
                     </li>
                     <li class="nav-item mt-1 fw-medium">
-                        <div class="outer">
+                        <div class="outer" id="editPeople">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('people.show') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit People</p>
                                 </a>
                             </div>

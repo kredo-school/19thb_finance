@@ -20,7 +20,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/transaction.js', 'resources/js/sidebar.js',
-        'resources/js/analysischart.js'
+        'resources/js/analysischart.js', 'resources/js/editPeople.js'
     ])
 
     {{-- Chart.js --}}

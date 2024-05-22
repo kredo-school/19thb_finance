@@ -29,7 +29,8 @@ class PremiumController extends Controller
         ]);
 
         try {
-            $payment = new Premium(); // Instance
+            $payment = User::findOrFail(Auth::user()->id);
+            // $payment = new Premium(); // Instance
             $payment->subscription   = $request->input('subscription');
             $payment->cardholder_name   = $request->input('cardholder_name');
             $payment->card_number      = $request->input('card_number');
@@ -58,5 +59,10 @@ class PremiumController extends Controller
             return back()->withInput()->withErrors(['error' => 'Error updating Payment info. Please try again.']);
         }
     }
-}
 
+    public function show() {
+        // $user = $this->user->findOrFail(Auth::user()->id);
+        return view('premium');
+              //  ->with('user', $user);
+    }
+}

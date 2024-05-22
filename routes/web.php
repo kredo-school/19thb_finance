@@ -7,6 +7,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ChildCategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParentCategoryController;
+use App\Http\Controllers\PeopleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
@@ -42,6 +43,9 @@ Route::get('/faq', [FaqController::class, 'create'])->name('faq');
 Route::get('/inquiry', [ReportController::class, 'create'])->name('inquiry');
 Route::post('/inquiry', [ReportController::class, 'store'])->name('inquiry.store');
 Route::get('/report', [ReportController::class, 'index']);
+Route::get('/report/show/{report}', [ReportController::class, 'show'])->name('report.show');
+Route::get('/report/{report}/edit', [ReportController::class, 'edit'])->name('report.edit');
+Route::patch('/report/{report}', [ReportController::class, 'update'])->name('report.update');
 
 Route::group(['middleware' => 'auth'], function() {
     // Category
@@ -73,7 +77,6 @@ Route::group(['middleware' => 'auth'], function() {
     // Transactions
     Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
 
-
     // Analysis
     Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');
     Route::get('/analysis/category', [AnalysisController::class, 'category'])->name('analysis.category');
@@ -86,4 +89,12 @@ Route::group(['middleware' => 'auth'], function() {
     // Profile
     Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [EditProfileController::class, 'show'])->name('profile.edit');
+
+    // People
+    Route::get('/people/show', [PeopleController::class, 'show'])->name('people.show');
+    Route::post('people/store', [PeopleController::class, 'store'])->name('people.store');
+    Route::get('/people/edit/{id}', [PeopleController::class, 'getPeopleById']);
+    Route::patch('people/update/{id}', [PeopleController::class, 'update'])->name('people.update');
+    Route::delete('people/destroy/{id}', [PeopleController::class, 'destroy'])->name('people.destroy');
+
 });
