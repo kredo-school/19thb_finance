@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit Profile
     
     // Edit People
-    if(pathname.includes('people')) {
+    if(pathname.includes('people') && !pathname.includes('analysis')) {
       const entry = document.getElementById('editPeople');
       entry.classList.add('active');
     }
