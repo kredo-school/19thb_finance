@@ -80,7 +80,7 @@
             </div>
             <div class="outer" id="entry">
                 <div class="inner">
-                    <a href="{{ route('calendars.transactions.new') }}" class="py-1 border-bottom text-decoration-none color-Letter">
+                    <a href="{{ route('entries.transactions.new') }}" class="py-1 border-bottom text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold">Entry</p>
                     </a>
                 </div>

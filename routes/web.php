@@ -11,10 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\WishlistsController;
-use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\TransactionController;
 
 Auth::routes();
-
 
 Route::get('/faq', function () {
     return view('contacts.faq');
@@ -73,7 +72,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/wishlists/edit', [WishlistsController::class, 'edit'])->name('calendars.wishlists.edit');
 
     // Transactions
-    Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
+    Route::get('/transactions/new', [TransactionController::class, 'new'])->name('entries.transactions.new');
+    Route::post('/transactions/create', [TransactionController::class, 'store'])->name('entries.transactions.store');
+    Route::get('/transactions/{id}/edit', [TransactionController::class, 'edit'])->name('entries.transactions.edit');
+    Route::get('/transactions/{id}/update', [TransactionController::class, 'update'])->name('entries.transactions.update');
 
 
     // Analysis
