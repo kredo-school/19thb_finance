@@ -108,7 +108,9 @@
                                                                 </label>
                                                             </div>
                                                         </form>
-                                                        <form action="" method="post">
+                                                        <form action="{{ route('item.destroy', $item->id) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
                                                             <button type="submit" class="btn p-0">
                                                                 <i class="fa-solid fa-trash-can text-secondary"></i> 
                                                             </button>
