@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Wishlist;
+use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Auth;
 
 class WishlistController extends Controller
@@ -38,15 +38,35 @@ class WishlistController extends Controller
 
     // show
     public function index() {
-        $wishlists = Wishlist::where('user_id', auth()->id())->get();
+        $wishlists = Wishlist::all();
+        // $wishlists = Wishlist::where('user_id', auth()->id())->get();
         return view('calendars.wishlists.show', compact('wishlists'));
     }
     // public function show(Wishlist $wishlist) {
-    //     return view('calendars.wishlists.show', compact('wishlist'));
+    //     $wishlists = Wishlist::all();
+    //     // $wishlists = Wishlist::where('user_id', auth()->id())->get();
+    //     return view('calendars.wishlists.show', compact('wishlists'));
     // }
 
     // edit
-    public function edit (Request $request) {
-        return view('calendars.wishlists.edit');
+    public function edit(Wishlist $wishlist) {
+        return view('calendars.wishlists.edit', compact('wishlist'));
+    }
+
+    public function update(Request $request, Wishlist $wishlist) {
+        $validated = $request->validate([
+            'title' => 'max:30',
+            'budget' => 'integer|max:20',
+        ]);
+
+        $validated['user_id'] = auth()->id();
+        $wishlist->update($validated);
+
+        return redirect()->route('calendars.wishlists.show');
+    }
+
+    public function destroy(Wishlist $wishlist) {
+        $wishlist->delete();
+        return redirect()->route('calendars.wishlists.show');
     }
 }
