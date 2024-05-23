@@ -104,10 +104,10 @@
                         <ul style="list-style-type:none;">
                             <li class="h5"><a href="#">Home</a></li>
                             <li class="h5"><a href="#">Service</a></li>
-                            <li class="h5"><a href="{{ route('premium')}}">Premium</a></li>
-                            <li class="h5"><a href="#">About Us</a></li>
-                            <li class="h5"><a href="#">FAQ</a></li>
-                            <a href="" class="btn btn-sub border btn-lg rounded rounded-pill color3 px-5 me-0">
+                            <li class="h5"><a href="{{ route('register.premium') }}">Premium</a></li>
+                            <li class="h5"><a href="{{ route('aboutUs') }}">About Us</a></li>
+                            <li class="h5"><a href="{{ route('faq') }}">FAQ</a></li>
+                            <a href="{{ route('inquiry') }}" class="btn btn-sub border btn-lg rounded rounded-pill color3 px-5 me-0">
                                 <span class="h4">inquiry</span>
                             </a>
                         </ul>
