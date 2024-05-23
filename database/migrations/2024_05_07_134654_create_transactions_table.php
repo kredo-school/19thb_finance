@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('transaction_type', ['expense', 'income']);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('child_category_id');
-            $table->unsignedBigInteger('person_id');
+            $table->unsignedBigInteger('person_id')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

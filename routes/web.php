@@ -13,18 +13,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditProfileController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
 use Psy\Command\EditCommand;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/new', [TransactionController::class, 'new'])->name('new');
 # Premium
 Route::get('/premium', function () {
     return view('premium');
-});
+})->name('premium');
 
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
@@ -35,6 +34,9 @@ Route::get('/privacyandterms', function () {
 });
 
 Auth::routes();
+
+Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('/learn-more', [HomeController::class, 'learnMore'])->name('learnMore');
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
@@ -64,6 +66,11 @@ Route::group(['middleware' => 'auth'], function() {
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
 
+    // ItemLists
+    Route::post('/item/store', [ItemController::class, 'store'])->name('item.store');
+    Route::patch('/item/{id}/check', [ItemController::class, 'updateChecked'])->name('item.updateChecked');
+    Route::delete('/item/{id}/destroy', [ItemController::class, 'destroy'])->name('item.destroy');
+
     // Wishlists
     Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
     Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.store');
@@ -85,7 +92,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     // Profile
     Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
-    Route::get('/profile/edit', [EditProfileController::class, 'show'])->name('profile.edit');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
     // People
     Route::get('/people/show', [PeopleController::class, 'show'])->name('people.show');
@@ -94,4 +101,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::patch('people/update/{id}', [PeopleController::class, 'update'])->name('people.update');
     Route::delete('people/destroy/{id}', [PeopleController::class, 'destroy'])->name('people.destroy');
 
+    Route::patch('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 });

@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-md-4 offset-md-4 ms-2">
-                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ url('/learn-more') }}">{{ __('Learn More') }}</a>
+                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ route('learnMore') }}">{{ __('Learn More') }}</a>
                     </div>
                 </div>
 

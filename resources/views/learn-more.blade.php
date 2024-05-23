@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="bg-color-Rainbow-opacity p-5" style="height: 75vh;">
+        <div class="bg-color-Rainbow-opacity p-5" style="height: 80vh;">
             <div class="row justify-content-center mt-5">
                 <div class="col-md-5">
                     <div class="row">
@@ -36,7 +36,9 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <button class="btn rounded-pill bg-color4 text-white w-75 mx-auto my-5"><span class="h4">Sign Up </span> for free</button>
+                        <a href="{{ route('register') }}" class="btn btn-main-reverse w-75 mx-auto my-5">
+                            <span class="h4">Sign Up </span> for free
+                        </a>
                     </div>
                 </div>
             </div>
@@ -127,7 +129,9 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <button class="btn rounded-pill bg-color4 text-white w-75 mx-auto my-5"><span class="h4">Sign Up </span> for free</button>
+                    <a href="{{ route('register') }}" class="btn btn-main w-75 mx-auto my-5">
+                        <span class="h4">Sign Up </span> for free
+                    </a>
                 </div>
 
             </div>

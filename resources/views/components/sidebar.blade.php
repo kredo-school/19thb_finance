@@ -104,7 +104,7 @@
         <li class="list-unstyled mt-4">
             <div class="d-flex">
                 <div class="side-icon me-2">
-                    <img src="{{ asset('images/nav-analysis.svg') }}" alt="">
+                    <img src="{{ asset('images/nav-setting.svg') }}" alt="">
                 </div>
                 <div class="outer">
                     <div class="inner">

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ChildCategory;
 use App\Models\ParentCategory;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,13 +10,11 @@ use Illuminate\Support\Facades\Auth;
 class ParentCategoryController extends Controller
 {
     private $parent_category;
-    private $child_category;
     private $user;
 
-    public function __construct(ParentCategory $parent_category, ChildCategory $child_category, User $user)
+    public function __construct(ParentCategory $parent_category, User $user)
     {
         $this->parent_category = $parent_category;
-        $this->child_category = $child_category;
         $this->user = $user;
     }
 

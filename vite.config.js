@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/js/sidebar.js',
                 'resources/js/analysischart.js',
                 'resources/js/editPeople.js',
+                'resources/js/item.js',
             ],
             refresh: true,
         }),
