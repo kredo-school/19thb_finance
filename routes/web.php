@@ -21,12 +21,9 @@ use Psy\Command\EditCommand;
 
 Route::get('/new', [TransactionController::class, 'new'])->name('new');
 # Premium
-Route::get('/premium', function () {
-    return view('premium');
-})->name('premium');
-
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
+Route::get('/premium', [PremiumController::class, 'show'])->name('premium');
 
 # Privacy & Terms
 Route::get('/privacyandterms', function () {
@@ -97,6 +94,7 @@ Route::group(['middleware' => 'auth'], function() {
     // Profile
     Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
     // People
     Route::get('/people/show', [PeopleController::class, 'show'])->name('people.show');
@@ -104,6 +102,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/people/edit/{id}', [PeopleController::class, 'getPeopleById']);
     Route::patch('people/update/{id}', [PeopleController::class, 'update'])->name('people.update');
     Route::delete('people/destroy/{id}', [PeopleController::class, 'destroy'])->name('people.destroy');
-
-    Route::patch('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 });

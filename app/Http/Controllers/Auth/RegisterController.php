@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\ChildCategory;
 use App\Models\ParentCategory;
+use App\Models\People;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -71,6 +71,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
+        $userPeople =  People::create([
+            'name' => $data['name'],
+            'user_id' => $user->id,
+            'color_hex' => 'FE6D73'
+        ]); 
+
         $defaultParentCategories = ParentCategory::where('is_default', 1)->get();
 
         if ($defaultParentCategories->isNotEmpty()) {
@@ -86,7 +92,7 @@ class RegisterController extends Controller
                     $newChildCategory->save();
                 }
             }
-        }
+        } 
 
         return $user;
     }

@@ -15,7 +15,7 @@
         
                     <div class="row justify-content-center">
                         <table class="table table-borderless">
-                            @foreach ($allPeople as $people)
+                            @foreach ($user->people as $people)
                                 <tr>
                                     <td style="background-color: #F7F3EB">
                                         <i class="fa-solid fa-circle-user" style="font-size: 3.5rem; color: #{{ $people->color_hex }};"></i>
@@ -104,13 +104,15 @@
                             <button type="submit" class="btn w-100 mt-5 btn-main">Update</button>
                         </form>
                         <div class="text-end mt-3 mb-4">
-                            <form action="{{ route('people.destroy', $people->id) }}" method="post" class="m-0">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn p-0" title="Delete">
-                                    <i class="fa-solid fa-trash-can fs-4 text-secondary"></i>
-                                </button>
-                            </form>
+                            @if ( count($user->people) > 1 )
+                                <form action="{{ route('people.destroy', $people->id) }}" method="post" class="m-0">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn p-0" title="Delete">
+                                        <i class="fa-solid fa-trash-can fs-4 text-secondary"></i>
+                                    </button>
+                                </form>
+                            @endif
                         </div>
                     </div>           
                 </div>

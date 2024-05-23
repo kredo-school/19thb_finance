@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
-
 use App\Models\Premium;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PremiumController extends Controller
 {
