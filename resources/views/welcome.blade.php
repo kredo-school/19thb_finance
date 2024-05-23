@@ -21,11 +21,9 @@
                         @if (Route::has('login'))
                             @auth
                                 <a
-                                    href="{{ url('/dashboard') }}"
+                                    href="#"
                                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                >
-                                    Dashboard
-                                </a>
+                                ></a>
                             @else
                                 <a
                                     href="{{ route('login') }}"
@@ -47,7 +45,7 @@
                     </div>
 
                     <div class="col-md-4 offset-md-4 ms-2">
-                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ url('/learn-more') }}">{{ __('Learn More') }}</a>
+                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ route('learnMore') }}">{{ __('Learn More') }}</a>
                     </div>
                 </div>
 

@@ -5,19 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class Wishlist extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'budget',
+        'user_id',
+    ];
+
     public function user() {
         return $this->belongsTo(User::class);
-    }
-
-    public function childCategory() {
-        return $this->belongsTo(ChildCategory::class);
-    }
-
-    public function person() {
-        return $this->belongsTo(People::class);
     }
 }

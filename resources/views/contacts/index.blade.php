@@ -22,23 +22,27 @@
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
                     <p class="mb-1">
-                        Name: {{ $report->name }}
+                        <span class="fw-semibold">Name: </span>{{ $report->name }}
                     </p>
                     <p class="mb-1">
-                        Registered name: {{ $report->user->name }} / User id: {{ $report->user_id }}
+                        <span class="fw-semibold">Registered name: </span>{{ $report->user->name }} / <span class="fw-semibold">User id: </span>{{ $report->user_id }}
                     </p>
                     <p>
-                        Email: {{ $report->email }}
+                        <span class="fw-semibold">Email: </span>{{ $report->email }}
                     </p>
+
                     <p class="mb-1">
-                        Subject: {{ $report->subject}}
+                        <span class="fw-semibold">Subject: </span>
+                        <a href="{{ route('report.show', $report) }}" class="color4 fw-semibold">
+                            {{ $report->subject}}
+                        </a>
                     </p>
                     <p class="mb-1">
                         {{ $report->created_at }}
                     </p>
                     <hr class="w-100 mt-0">
                     <p>
-                        Details: {{ $report->details }}
+                        <span class="fw-semibold">Details: </span>{{ $report->details }}
                     </p>
                 </div>
             </div>

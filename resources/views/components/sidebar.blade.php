@@ -13,7 +13,6 @@
                     </a>
                 </div>
             </div>
-            
         </li>
 
         <!-- Analisys -->
@@ -94,7 +93,7 @@
             </div>
             <div class="outer" id="side_profile">
                 <div class="inner">
-                    <a href="#" class="py-1 border-bottom text-decoration-none color-Letter">
+                    <a href="{{ route('profile.show') }}" class="py-1 border-bottom text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold fw-bold">Profile</p>
                     </a>
                 </div>
@@ -105,7 +104,7 @@
         <li class="list-unstyled mt-4">
             <div class="d-flex">
                 <div class="side-icon me-2">
-                    <img src="{{ asset('images/nav-analysis.svg') }}" alt="">
+                    <img src="{{ asset('images/nav-setting.svg') }}" alt="">
                 </div>
                 <div class="outer">
                     <div class="inner">
@@ -131,15 +130,15 @@
                         <div class="outer">
                             <div class="inner">
                                 <a href="" class="text-decoration-none">
-                                    <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Account</p>
+                                    <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Profile</p>
                                 </a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item mt-1 fw-medium">
-                        <div class="outer">
+                        <div class="outer" id="editPeople">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('people.show') }}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit People</p>
                                 </a>
                             </div>

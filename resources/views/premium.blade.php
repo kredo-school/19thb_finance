@@ -92,7 +92,8 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="btn rounded-pill text-white fw-bold w-100 bg-color4">Send</button>
+                            <button type="submit" class="btn rounded-pill text-white fw-bold w-100 bg-color4" data-bs-toggle="modal" data-bs-target="#successModal">Send</button>
+                            @include('profile.modal.modal_premium')
                         </div>
                     </div>
                 </div>

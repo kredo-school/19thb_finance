@@ -193,6 +193,13 @@ class ChildCategorySeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'name' => "Income",
+                'is_default' => '1',
+                'parent_category_id' => 10,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ];
         $this->child_category->insert($child_categories);
     }
