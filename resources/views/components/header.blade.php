@@ -102,7 +102,7 @@
                     </div>
                     <div class="modal-body">
                         <ul style="list-style-type:none;">
-                            <li class="h5"><a href="{{ route('welcome') }}">Home</a></li>
+                            <li class="h5"><a href="{{ route('calendars.home') }}">Home</a></li>
                             <li class="h5"><a href="{{ route('learnMore') }}">Service</a></li>
                             <li class="h5"><a href="{{ route('premium')}}">Premium</a></li>
                             <li class="h5"><a href="{{ route('aboutUs') }}">About Us</a></li>

@@ -46,6 +46,14 @@ class HomeController extends Controller
             return Carbon::parse($transaction->datetime)->format('Y-m-d');
         });
 
+        $totalIncomeAmount = $transactions
+                            ->where('transaction_type', 'income')
+                            ->sum('amount');
+
+        $totalExpenseAmount = $transactions
+                            ->where('transaction_type', 'expense')
+                            ->sum('amount');
+
         $calendar = new CalendarView($date);
 
         $user = $this->user->findOrFail(Auth::user()->id);
@@ -53,6 +61,8 @@ class HomeController extends Controller
         return view('calendars.home', [
             'calendar' => $calendar,
             'groupedTransactions' => $groupedTransactions,
+            'totalIncomeAmount' => $totalIncomeAmount,
+            'totalExpenseAmount' => $totalExpenseAmount,
             'user' => $user,
         ]);
     }

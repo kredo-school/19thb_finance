@@ -31,11 +31,42 @@
                             {!! $calendar->render() !!}
                     </div>
                 </div>
+
+                <div class="row justify-content-center">
+                    <div class="card bg-white shadow border-0 rounded-4 mt-3 w-auto">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-borderless text-center text-nowrap mb-0">
+                                    <thead>
+                                        <th class="text-secondary bg-white p-0">Income</th>
+                                        <th class="bg-white"></th>
+                                        <th class="text-secondary bg-white p-0">Expense</th>
+                                        <th class="bg-white"></th>
+                                        <th class="text-secondary bg-white p-0">Balance</th>
+                                    </thead>
+                                    <tbody>
+                                        <td class="h4 bg-white p-2" style="color: #227C9D;">¥{{ number_format(floor($totalIncomeAmount)) }}</td>
+                                        <td class="h4 bg-white p-2">-</td>
+                                        <td class="h4 bg-white p-2" style="color: #FE6D73;">¥{{ number_format(floor($totalExpenseAmount)) }}</td>
+                                        <td class="h4 bg-white p-2">=</td>
+                                        <td class="h4 bg-white p-2" style="color: {{ $totalIncomeAmount - $totalExpenseAmount > 0 ? '#227C9D' : '#FE6D73' }};">
+                                            @if ($totalIncomeAmount - $totalExpenseAmount < 0)
+                                                - ¥{{ number_format(floor(abs($totalIncomeAmount - $totalExpenseAmount))) }}
+                                            @else
+                                                ¥{{ number_format(floor($totalIncomeAmount - $totalExpenseAmount)) }}
+                                            @endif
+                                        </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Detail of Calendar -->
             <div class="col-4 detail_lalendar mt-5">
-                <div class="overflow-y-scroll shadow" style="max-height: 500px;">
+                <div class="overflow-y-scroll shadow" style="max-height: 630px;">
                     @foreach ($groupedTransactions as $date => $dailyTransactions)
                         <div class="card rounded-0 border-0">
                             <div class="card-header bg-color3 rounded-0 border-0 py-1">
@@ -85,14 +116,14 @@
             <!-- Lists -->
             <div class="col list">
                 @foreach ($user->itemLists as $itemList)
-                    <div class="accordion shadow-sm rounded rounded-4" id="accordion{{ $itemList->id }}">
+                    <div class="accordion shadow-sm rounded rounded-4" id="accordionExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $itemList->id }}" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="accordion-header" id="heading{{ $itemList->id }}">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $itemList->id }}" aria-expanded="true" aria-controls="collapse{{ $itemList->id }}">
                                 {{ $itemList->name }}
                             </button>
                             </h2>
-                            <div id="collapse{{ $itemList->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion{{ $itemList->id }}">
+                            <div id="collapse{{ $itemList->id }}" class="accordion-collapse collapse show" aria-labelledby="heading{{ $itemList->id }}" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col">

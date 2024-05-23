@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             ChildCategorySeeder::class,
             PeopleSeeder::class,
             TransactionSeeder::class,
+            ItemListSeeder::class
         ]);
     }
 }

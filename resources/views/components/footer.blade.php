@@ -11,7 +11,7 @@
         <!-- nav -->
         <div class="col-md-6 footer-nav">
             <ul class="d-sm-flex list-unstyled text-white justify-content-center mt-4 mb-0">
-                <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ route('welcome') }}">Home</a></li>
+                <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ Auth::check() ? route('calendars.home') : route('welcome') }}">Home</a></li>
                 <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ route('learnMore') }}">Service</a></li>
                 <li class="text-center px-4 mx-auto text-nowrap"><a class="nav-link" href="{{ route('aboutUs') }}">About Us</a></li>
                 <li class="text-center px-4 mx-auto"><a class="nav-link" href="{{ route('faq') }}">FAQ</a></li>

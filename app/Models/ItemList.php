@@ -9,6 +9,11 @@ class ItemList extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'user_id',
+    ];
+
     public function items() {
         return $this->hasMany(Item::class);
     }
