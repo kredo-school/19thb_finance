@@ -3,23 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\People;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PeopleController extends Controller
 {
     private $people;
+    private $user;
 
-    public function __construct(People $people)
+    public function __construct(People $people, User $user)
     {
         $this->people = $people;
+        $this->user = $user;
     }
 
     public function show() {
-        $allPeople = $this->people->all();
+        $user = $this->user->findOrFail(Auth::user()->id);
 
         return view('profile.people.show')
-                ->with('allPeople', $allPeople);
+                ->with('user', $user);
     }
 
     public function store(Request $request) {
