@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ItemList;
 use App\Models\ParentCategory;
+use App\Models\People;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -70,18 +72,33 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        // is_defaultが1のデフォルトカテゴリを取得
-        $defaultCategories = ParentCategory::where('is_default', 1)->get();
+        $userPeople =  People::create([
+            'name' => $data['name'],
+            'user_id' => $user->id,
+            'color_hex' => 'FE6D73'
+        ]);
 
-        if ($defaultCategories->isNotEmpty()) {
-            // 新しいユーザーに関連付けるためにデフォルトのカテゴリをコピーし、user_idを更新
-            foreach ($defaultCategories as $defaultCategory) {
-                $newCategory = $defaultCategory->replicate();
-                $newCategory->user_id = $user->id;
-                $newCategory->save();
+        $item_list = ItemList::create([
+            'name' => 'Shopping List',
+            'user_id' =>$user->id,
+        ]);
+
+        $defaultParentCategories = ParentCategory::where('is_default', 1)->get();
+
+        if ($defaultParentCategories->isNotEmpty()) {
+            foreach ($defaultParentCategories as $defaultParentCategory) {
+                $newParentCategory = $defaultParentCategory->replicate();
+                $newParentCategory->user_id = $user->id;
+                $newParentCategory->save();
+
+                $defaultChildCategories = $defaultParentCategory->childCategories()->where('is_default', 1)->get();
+                foreach ($defaultChildCategories as $defaultChildCategory) {
+                    $newChildCategory = $defaultChildCategory->replicate();
+                    $newChildCategory->parent_category_id = $newParentCategory->id;
+                    $newChildCategory->save();
+                }
             }
-            
-        }
+        } 
 
         return $user;
     }

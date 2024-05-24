@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('cardholder_name', 50);
-            $table->bigInteger('card_number');
-            $table->tinyInteger('expire_month');
-            $table->tinyInteger('expire_year');
-            $table->tinyInteger('security_code');
+            $table->string('card_number');
+            $table->string('expire_month');
+            $table->string('expire_year');
+            $table->string('security_code');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
