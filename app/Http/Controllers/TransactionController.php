@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 
 class TransactionController extends Controller
@@ -43,13 +44,20 @@ class TransactionController extends Controller
         return redirect()->route('calendars.home');
     }
 
-    public function edit(Request $request) {
+    public function edit($transaction_id) {
         $user = $this->user->findOrFail(Auth::user()->id);
-        $today = now()->format('Y-m-d');
+        $transaction = $this->transaction->findOrFail($transaction_id);
+        $date = Carbon::parse($transaction->datetime)->format('Y-m-d');
 
         return view('entries.transactions.edit')
                 ->with('user', $user)
-                ->with('today', $today);
+                ->with('transaction', $transaction)
+                ->with('date', $date);
+    }
+
+    public function update(Request $request, $id) {
+
+        return redirect()->route('calendars.home');
     }
 
 

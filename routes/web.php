@@ -78,9 +78,8 @@ Route::group(['middleware' => 'auth'], function() {
     // Transactions
     Route::get('/transactions/new', [TransactionController::class, 'new'])->name('entries.transactions.new');
     Route::post('/transactions/create', [TransactionController::class, 'store'])->name('entries.transactions.store');
-    Route::get('/transactions/{id}/edit', [TransactionController::class, 'edit'])->name('entries.transactions.edit');
-    Route::get('/transactions/{id}/update', [TransactionController::class, 'update'])->name('entries.transactions.update');
-
+    Route::get('/transactions/{transaction_id}/edit', [TransactionController::class, 'edit'])->name('entries.transactions.edit');
+    Route::patch('/transactions/{transaction_id}/update', [TransactionController::class, 'update'])->name('entries.transactions.update');
 
     // Analysis
     Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');

@@ -34,8 +34,9 @@
                 <div class="tab__panel">
                     <div class="tab__panel-box tab__panel-box001 is-show" data-panel="01">
                         <div class="card my-4 py-5 px-5 border-0 shadow-sm">
-                            <form method="POST" action="{{ route('entries.transactions.store') }}" class="form text-start">
-                            @csrf 
+                            <form method="POST" action="{{ route('entries.transactions.edit', $transaction->id) }}" class="form text-start">
+                            @csrf
+                            @method('patch')
 
                                 <!-- Expenses -->
                                 <input type="hidden" id="transaction_type" name="transaction_type" value="expense">
@@ -43,20 +44,23 @@
                                 <!-- Date -->
                                 <div class="COMP-form input-group border-bottom px-3 pb-2">
                                     <label for="datetime" class="form-label h5 fw-bold color-Letter">Date</label>
-                                    <input type="date" class="font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" name="datetime" value="{{ $today }}">
+                                    <input type="date" class="font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" name="datetime" value="{{ $date }}">
                                 </div>
 
                                 <!-- Price -->
                                 <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4">
                                     <label for="amount" class="form-label h5 fw-bold color-Letter">Price</label>
-                                    <input type="number" class="no-spin font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" name="amount" placeholder="0">
+                                    <input type="number" class="no-spin font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" name="amount" placeholder="0" value="{{ number_format(floor($transaction->amount)) }}">
                                     <p class="ps-2 pt-1">yen</p>
                                 </div>
 
                                 <!-- Category -->
                                 <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4 position-relative">
                                     <label for="category" class="category form-label h5 fw-bold color-Letter">Category</label>
-                                    <p class="font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" id='selected' name="child_category_name">breakfast</p>
+                                    <div class="category-icon ms-auto me-2">
+                                        <img src="{{ asset('images/category-icon/' . $transaction->childCategory->parentCategory->icon_path . '.svg') }}" class="object-contain filter-{{ $transaction->childCategory->parentCategory->color_hex }}"  alt="">
+                                    </div>
+                                    <p class="font-end ps-auto pe-0 me-0 mb-2 border-0 text-end" id='selected' name="child_category_name">{{ $transaction->childCategory->name }}</p>
                                     <input type="hidden" id="child_category_id" name="child_category_id" value="26">
                             
                                     <!-- parent_category -->
@@ -110,7 +114,10 @@
                                 <!-- Person -->
                                 <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4 position-relative">
                                     <label for="person" class="form-label h5 fw-bold color-Letter">Person</label>
-                                    <p class="font-end ms-auto ps-auto pe-0 me-0 mb-2 border-0 text-end" id='selected_person' name="child_category_name">sun</p>
+                                    <div class="category-icon ms-auto me-2">
+                                        <img src="{{ asset('images/category-icon/' . $transaction->person->icon_path . '.svg') }}" class="object-contain filter-{{ $transaction->person->color_hex }}"  alt="">
+                                    </div>
+                                    <p class="font-end ps-auto pe-0 me-0 mb-2 border-0 text-end" id='selected_person' name="child_category_name">{{ $transaction->person->name }}</p>
                                     <input type="hidden" id="person_id" name="person_id" value="1">
 
                                     <!-- person -->
@@ -119,14 +126,14 @@
                                             <strong>People</strong>
                                             <hr>
                                             <ul class="tab d-flex justify-content-evenly flex-wrap p-0">
-                                                @foreach($user->parentCategories as $parent_category)
+                                                @foreach($user->people as $person)
                                                 
                                                 <li class="d-flex flex-item">
                                                     <div class="category-icon">
                                                         <img src="{{ asset('images/category-icon/' . $parent_category->icon_path . '.svg') }}" class="object-contain filter-{{ $parent_category->color_hex }}" alt="">
                                                     </div>
                                                     <p id="open" data-id='Meal' class="m-0 px-2 icon-link">
-                                                        <a href="#{{ $parent_category->name }}" class="text-decoration-none" style="color: #{{ $parent_category->color_hex }};">{{ $parent_category->name }}</a>
+                                                        <a href="#{{ $parent_category->name }}" class="text-decoration-none" style="color: #{{ $parent_category->color_hex }};">{{ $person }}</a>
                                                     </p>
                                                     
                                                 </li>
@@ -139,7 +146,7 @@
 
                             
                                 <button type="submit" class="btn btn-main btn-lg px-5 mt-5 w-100">
-                                    <span class="pt-1 fw-bold">Save</span>
+                                    <span class="pt-1 fw-bold">Update</span>
                                 </button>
 
                             </form>

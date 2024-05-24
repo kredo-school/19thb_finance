@@ -19,7 +19,7 @@
                 <!-- tab__menu -->
                 <ul class="tab__menu row mx-auto align-items-center fw-bold list-unstyled" style="width:380px;">
                     <li class="tab__menu-item is-active col border-end" data-tab="01">
-                        <p class="m-0 py-1">Expenses</p>
+                        <p class="m-0 py-1">Expense</p>
                         <hr class="w-50 mx-auto mt-1 mb-0">
                     </li>
                     <li class="tab__menu-item col border-end" data-tab="02">
@@ -122,12 +122,12 @@
                                                 @foreach($user->parentCategories as $parent_category)
                                                 
                                                 <li class="d-flex flex-item">
-                                                    <div class="category-icon">
+                                                    <!-- <div class="category-icon">
                                                         <img src="{{ asset('images/category-icon/' . $parent_category->icon_path . '.svg') }}" class="object-contain filter-{{ $parent_category->color_hex }}" alt="">
-                                                    </div>
-                                                    <p id="open" data-id='Meal' class="m-0 px-2 icon-link">
+                                                    </div> -->
+                                                    <!-- <p id="open" data-id='Meal' class="m-0 px-2 icon-link">
                                                         <a href="#{{ $parent_category->name }}" class="text-decoration-none" style="color: #{{ $parent_category->color_hex }};">{{ $parent_category->name }}</a>
-                                                    </p>
+                                                    </p> -->
                                                     
                                                 </li>
 
