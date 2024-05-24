@@ -26,23 +26,7 @@ class UserSeeder extends Seeder
                 'role' => 'admin',
                 'created_at' => now(),
                 'updated_at' => now()
-            ],
-            [
-                'name' => 'John Smith',
-                'email' => 'john@mail.com',
-                'password' => Hash::make('123456789'),
-                'role' => 'user',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'name' => 'Mary Smith',
-                'email' => 'mary@mail.com',
-                'password' => Hash::make('123456789'),
-                'role' => 'user',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
+            ]
         ];
         $this->user->insert($users);
     }

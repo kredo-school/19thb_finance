@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditProfileController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
 use App\Models\Wishlist;
 use Psy\Command\EditCommand;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/new', [TransactionController::class, 'new'])->name('new');
 # Premium
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
@@ -33,6 +32,9 @@ Route::get('/privacyandterms', function () {
 });
 
 Auth::routes();
+
+Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('/learn-more', [HomeController::class, 'learnMore'])->name('learnMore');
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
@@ -61,6 +63,11 @@ Route::group(['middleware' => 'auth'], function() {
 
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
+
+    // ItemLists
+    Route::post('/item/store', [ItemController::class, 'store'])->name('item.store');
+    Route::patch('/item/{id}/check', [ItemController::class, 'updateChecked'])->name('item.updateChecked');
+    Route::delete('/item/{id}/destroy', [ItemController::class, 'destroy'])->name('item.destroy');
 
     // Wishlists
     Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
@@ -94,5 +101,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/people/edit/{id}', [PeopleController::class, 'getPeopleById']);
     Route::patch('people/update/{id}', [PeopleController::class, 'update'])->name('people.update');
     Route::delete('people/destroy/{id}', [PeopleController::class, 'destroy'])->name('people.destroy');
-
 });

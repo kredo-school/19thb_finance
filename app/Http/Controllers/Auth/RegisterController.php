@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ItemList;
 use App\Models\ParentCategory;
 use App\Models\People;
 use App\Models\User;
@@ -75,7 +76,12 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'user_id' => $user->id,
             'color_hex' => 'FE6D73'
-        ]); 
+        ]);
+
+        $item_list = ItemList::create([
+            'name' => 'Shopping List',
+            'user_id' =>$user->id,
+        ]);
 
         $defaultParentCategories = ParentCategory::where('is_default', 1)->get();
 
