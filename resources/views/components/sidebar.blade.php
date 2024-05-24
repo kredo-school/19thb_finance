@@ -91,7 +91,7 @@
             <div class="side-icon me-2">
                 <img src="{{ asset('images/nav-profile.svg') }}" alt="">
             </div>
-            <div class="outer" id="side_profile">
+            <div class="outer" id="showProfile">
                 <div class="inner">
                     <a href="{{ route('profile.show') }}" class="py-1 border-bottom text-decoration-none color-Letter">
                         <p class="py-1 px-3 m-0 fw-bold fw-bold">Profile</p>
@@ -129,7 +129,7 @@
                     <li class="nav-item mt-1 fw-medium">
                         <div class="outer">
                             <div class="inner">
-                                <a href="" class="text-decoration-none">
+                                <a href="{{ route('profile.edit')}}" class="text-decoration-none">
                                     <p class="py-1 px-2 m-0 fw-medium color-Letter">Edit Profile</p>
                                 </a>
                             </div>

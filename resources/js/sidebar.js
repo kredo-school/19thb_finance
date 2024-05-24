@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const entry = document.getElementById('peopleAnalysis');
       entry.classList.add('active');
     }
+
+    if(pathname.includes('profile') && pathname.includes('show')) {
+      const entry = document.getElementById('showProfile');
+      entry.classList.add('active');
+    }
+
     // Edit Category
     if(pathname.includes('category') && !pathname.includes('analysis')) {
       const entry = document.getElementById('editCategory');

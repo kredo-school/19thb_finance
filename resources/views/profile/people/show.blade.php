@@ -11,8 +11,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-8 m-5 px-0">
                     <h3 class="text-center">People</h3>
-                    <div class="bg-color-Rainbow mx-auto mb-5" style="width: 50px; height: 2px;"></div>
-        
+                    <div class="bg-color-Rainbow mx-auto mb-5" style="width: 50px; height: 2px;"></div>      
                     <div class="row justify-content-center">
                         <table class="table table-borderless">
                             @foreach ($user->people as $people)
