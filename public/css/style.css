@@ -262,6 +262,11 @@ body {
 }
 
 /* sidebar */
+aside {
+  min-height: calc(100vh - 160px);
+  background-color: #FFE4D6;
+}
+
 .detail-link {
   list-style: none;
 }

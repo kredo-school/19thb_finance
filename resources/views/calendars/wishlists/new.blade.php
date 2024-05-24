@@ -4,7 +4,7 @@
 
 @section('content')
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">@include('components.sidebar')</aside>
+    <aside class="col-auto">@include('components.sidebar')</aside>
     <article class="col-9 mt-4">
         <section class="container text-center">
             <div class="col card-wrapper mt-4 mx-auto">
