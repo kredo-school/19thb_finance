@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  color: #343A40 !important;
 }
 
 /* font color */
@@ -25,7 +26,7 @@ body {
     color: #343A40;
 }
 .color-Muted{
-    color: #b3b2b2;
+    color: #b1b0b0;
 }
 
 #premium-p {
@@ -60,7 +61,7 @@ body {
     background-color: #FE6D73;
 }
 .bg-color3{
-    background-color: #0FA3B1;
+    background-color: #3ACBD9;
 }
 .bg-color4{
     background-color: #F7A072;
@@ -164,6 +165,7 @@ body {
   border-radius: 50px;
 }
 .btn-main-reverse:hover {
+  color: #F7A072;
   opacity: 0.6;
 }
 
@@ -260,6 +262,11 @@ body {
 }
 
 /* sidebar */
+aside {
+  min-height: calc(100vh - 160px);
+  background-color: #FFE4D6;
+}
+
 .detail-link {
   list-style: none;
 }
@@ -530,7 +537,7 @@ color: #fff;
   display: block;
   width: 0;
   height: 0;
-  left: 150px;
+  left: 120px;
   top: -30px;
   border-right: 50px solid transparent;
   border-bottom: 30px solid #F8FAFC;
@@ -538,6 +545,9 @@ color: #fff;
 }
 
 /* icon color filter */
+.filter-bg-color {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(1475%) hue-rotate(26deg) brightness(127%) contrast(94%);
+}
 .filter-2FCC71 {
   filter: brightness(0) saturate(100%) invert(66%) sepia(45%) saturate(626%) hue-rotate(92deg) brightness(89%) contrast(98%);
 }
@@ -632,4 +642,20 @@ color: #fff;
 
 .filter-218C74 {
   filter: brightness(0) saturate(100%) invert(41%) sepia(70%) saturate(455%) hue-rotate(116deg) brightness(94%) contrast(85%);
+}
+
+.filter-FE6D73 {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(91%) saturate(687%) hue-rotate(316deg) brightness(105%) contrast(103%);
+}
+
+.filter-227C9D {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(100%) saturate(380%) hue-rotate(150deg) brightness(93%) contrast(87%);
+}
+
+.filter-0FA3B1 {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(48%) saturate(6184%) hue-rotate(151deg) brightness(93%) contrast(88%);
+}
+
+.filter-F7A072 {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(4815%) hue-rotate(307deg) brightness(97%) contrast(99%);
 }

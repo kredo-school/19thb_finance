@@ -6,20 +6,22 @@
         <div class="col-4 m-5">
             <h3 class="text-center mb-5" style="text-underline-offset: 0.5em; text-decoration-line: underline; text-decoration-color: #F7A072">Profile</h3>
 
-            <form action="#" method="post">
+            <form action="{{ route('profile.update')}}" method="POST">
                 @csrf
+                @method('PATCH')
+
                 <div class="row">
                     <div class="col-7">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control mb-3" id="name" value="Money Juuco">
-                    </div>
+                        <input type="text" class="form-control mb-3" id="name" name="name" value="{{$user->name}}">
+                    </div> 
                     <div class="col-auto">
                         <i class="fa-solid fa-circle-user ps-3" style="font-size: 5rem; color: #FE6D73;"></i>
                     </div>
                 </div>
 
-                <label for="icon_color" class="form-label">Icon Color</label>
-                <select name="icon_color" id="icon_color" class="form-select w-25 mb-3" onchange="changeColor(this)">
+                <label for="icon_color_hex" class="form-label">Icon Color</label>
+                <select name="icon_color_hex" id="icon_color_hex" class="form-select w-25 mb-3" onchange="changeColor(this)">
                     {{-- TODO: Color CSS --}}
                     <option value="#FE6D73">Pink</option>
                     <option value="#227C9D">Blue</option>
@@ -29,7 +31,7 @@
                 </select>
 
                 <label for="name" class="form-label">Mail</label>
-                <input type="email" class="form-control mb-5" value="Money-Juuco@gmail.com">
+                <input type="email" class="form-control mb-5" name="email" id="email" value="Money-Juuco@gmail.com">
 
                 <button type="submit" class="btn rounded-pill text-white fw-bold w-100 bg-color4 mb-4">Update</button>
             </form>

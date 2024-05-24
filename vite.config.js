@@ -10,7 +10,10 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/css/app.css',
                 'resources/js/transaction.js',
-                'resources/js/sidebar.js'
+                'resources/js/sidebar.js',
+                'resources/js/analysischart.js',
+                'resources/js/editPeople.js',
+                'resources/js/item.js',
             ],
             refresh: true,
         }),

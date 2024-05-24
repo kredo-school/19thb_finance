@@ -11,7 +11,7 @@
                 </div>
                 <div class="col mt-auto text-center">
                     {{-- TODO: CSS Color --}}
-                    <a href="{{route('profile.edit')}}" class="text-decoration-none btn btn-sm btn-outline-warning rounded-pill px-3 py-0">edit</a>
+                    <a href="{{ route('profile.edit') }}" class="text-decoration-none btn btn-sm btn-outline-warning rounded-pill px-3 py-0">edit</a>
                 </div>
             </div>
             <div class="row mt-5">
@@ -41,7 +41,7 @@
                     <h3 class="text-center" style="text-underline-offset: 0.5em; text-decoration-line: underline; text-decoration-color: #F7A072">People</h3>
                 </div>
                 <div class="col mt-auto text-center">
-                    <a href="{{route('profile.people.edit')}}" class="text-decoration-none btn btn-sm btn-outline-warning rounded-pill px-3 py-0">edit</a>
+                    <a href="#" class="text-decoration-none btn btn-sm btn-outline-warning rounded-pill px-3 py-0">edit</a>
                 </div>
             </div>
             <div class="card bg-light border-0 mt-4">

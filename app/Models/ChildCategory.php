@@ -11,6 +11,10 @@ class ChildCategory extends Model
     use HasFactory;
 
     public function parentCategory() {
-        return $this->belongsTo(ParentCategory::class)->where('user_id', Auth::user()->id)->exists();
+        return $this->belongsTo(ParentCategory::class)->where('user_id', Auth::user()->id);
+    }
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
     }
 }

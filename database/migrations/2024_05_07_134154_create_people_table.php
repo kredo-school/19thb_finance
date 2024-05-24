@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('name', 50);
             $table->unsignedBigInteger('user_id');
             $table->string('color_hex', 7);
-            $table->string('icon_path');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
