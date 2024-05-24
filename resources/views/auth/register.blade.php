@@ -87,14 +87,18 @@
                                 </button>
                             </div>
 
-                            <div>
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ route('login') }}">
-                                    {{ __('I already have an account') }}
-                                </a>
-    
-                                <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ url('/privacyandterms') }}">
-                                    {{ __('Privacy & Terms') }}
-                                </a>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-1">
+                                <div class="col-md-7 p-0">
+                                    <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ route('login') }}">
+                                        {{ __('I already have an account') }}
+                                    </a>
+                                </div>
+
+                                <div class="col-md-5 p-0">
+                                    <a class="btn btn-link text-decoration-none fw-semibold color4 text-md-start d-inline" href="{{ url('/privacyandterms') }}">
+                                        {{ __('Privacy & Terms') }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </form>
