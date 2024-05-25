@@ -22,7 +22,7 @@
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
                     <p class="mb-1">
-                        <span class="fw-semibold">Name: </span>{{ $report->name }}
+                        <span class="fw-semibold">Name: </span>{{ $report->name }} <span class="badge rounded-pill text-bg-secondary float-end w-25">{{ $report->status }}</span>
                     </p>
                     <p class="mb-1">
                         <span class="fw-semibold">Registered name: </span>{{ $report->user->name }} / <span class="fw-semibold">User id: </span>{{ $report->user_id }}
