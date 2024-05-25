@@ -8,13 +8,8 @@
     <p id="premium-p" class="position-absolute top-50 start-50 translate-middle">premium</p>
 </div>
 
-<<<<<<< HEAD
 <div class="container py-4">
-    <div class="row justify-content-center mx-4">
-=======
-<div class="container p-4">
     <div class="row justify-content-center mt-5">
->>>>>>> main
         <div class="col-md-auto d-flex align-items-stretch position-relative">
             <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
                 <div class="row py-2">

@@ -9,7 +9,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-4 m-5">
-                        <h3 class="text-center mb-5" style="text-underline-offset: 0.5em; text-decoration-line: underline; text-decoration-color: #F7A072">Profile</h3>
+                        <h3 class="text-center">Profile</h3>
+                        <div class="bg-color-Rainbow mx-auto mb-5" style="width: 50px; height: 2px;"></div>
 
                         <form action="{{ route('profile.update')}}" method="POST">
                             @csrf
@@ -54,7 +55,8 @@
             
                     <div class="col-3 m-5">
                         <div id="content" style="display: none;">
-                            <h3 class="text-center mb-5" style="text-underline-offset: 0.5em; text-decoration-line: underline; text-decoration-color: #F7A072">Change Password</h3>
+                            <h3 class="text-center">Change Password</h3>
+                            <div class="bg-color-Rainbow mx-auto mb-5" style="width: 50px; height: 2px;"></div>
                             <form action="#" method="post">
                                 @csrf
                                 <label for="password" class="form-label">Password</label>
