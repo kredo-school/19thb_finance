@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_lists', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('user_id');
-            $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        Schema::table('wishlists', function (Blueprint $table) {
+            $table->integer('budget')->change();
         });
     }
 
@@ -26,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('item_lists');
+        Schema::table('wishlists', function (Blueprint $table) {
+            $table->decimal('budget', 10, 2)->change();
+        });
     }
 };

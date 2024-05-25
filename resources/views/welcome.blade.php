@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-md-4 offset-md-4 ms-2">
-                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ url('/learn-more') }}">{{ __('Learn More') }}</a>
+                        <a class="btn btn-main-1 fw-semibold rounded-pill px-4 w-100" style="letter-spacing: .1rem;" href="{{ route('learnMore') }}">{{ __('Learn More') }}</a>
                     </div>
                 </div>
 
@@ -94,9 +94,15 @@
                             <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 30px;" class="py-2">
+<<<<<<< HEAD
                                     <a href="{{ route('profile.edit') }}" class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</a>
                                     {{-- <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p> --}}    
                             </div>
+=======
+                                    {{-- <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p> --}}
+                                    <a href="{{ route('profile.edit') }}" class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</a>
+                                </div>
+>>>>>>> main
     
                                 <div class="d-flex">
                                     <img src="{{ asset('images/account-sample.png') }}" alt="account_sample" style="width: 150px; height: 110px;">

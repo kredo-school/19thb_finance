@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('color_hex', 7);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

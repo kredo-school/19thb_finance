@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="container-fluid position-relative m-0 p-0">
-    <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="background_Inquiry" class="w-100" style="height: 60px;">
+    {{-- <img src="images/bg_img_aboutUs_faq_inquiry.jpg" alt="background_Inquiry" class="w-100" style="height: 60px;">
 
-    <img src="images/balloon.png" alt="balloon" class="opacity-75 position-absolute top-50 end-0 translate-middle" style="height: 60px;">
+    <img src="images/balloon.png" alt="balloon" class="opacity-75 position-absolute top-50 end-0 translate-middle" style="height: 60px;"> --}}
 </div>
 
 <div class="container my-3">
@@ -20,26 +20,23 @@
         <div class="row">
             <div class="col mb-2">
                 <div class="col text-secondary border rounded-3 bg-white bg-opacity-50 w-100 mb-2 px-5 py-3">
-                    <div class="row">
-                        <div class="col">
-                            <p class="mb-1">
-                                <span class="fw-semibold">Name: </span>{{ $report->name }}
-                            </p>
-                        </div>
-
-                        <div class="col mb-2">
-                            <form method="POST" action="#">
-                                @csrf
-                                @method('patch')
-                                <input id="status" list="datalistOptions" class="form-control @error('status') is-invalid @enderror" name="status" value="{{ old('status', $report->status) }}">
-                                <datalist id="datalistOptions">
-                                    <option value="1. New">
-                                    <option value="2. Inprogress">
-                                    <option value="3. Done">
-                                </datalist>
-                            </form>
-                        </div>
+                    <div class="mb-2">
+                        <form method="POST" action="{{ route('report.update', $report) }}">
+                            @csrf
+                            @method('patch')
+                            <input id="status" list="datalistOptions" class="form-control @error('status') is-invalid @enderror" style="width: 120px;" name="status" value="{{ old('status', $report->status) }}">
+                            <datalist id="datalistOptions">
+                                <option value="New">
+                                <option value="In progress">
+                                <option value="Done">
+                            </datalist>
+                        </form>
                     </div>
+
+                    <p class="mb-1">
+                        <span class="fw-semibold">Name: </span>{{ $report->name }}
+                    </p>
+
                     <p class="mb-1">
                         <span class="fw-semibold">Registered name: </span>{{ $report->user->name }} / <span class="fw-semibold">User id: </span>{{ $report->user_id }}
                     </p>

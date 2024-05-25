@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body p-5 pt-3">
                 <div class="row justify-content-center my-4">
-                    <img src="images/pig.png" alt="Money-juu" style="width: 100px">
+                    <img src="{{ asset('images/pig.png') }}" alt="Money-juu" style="width: 100px">
                 </div>
             </div>
         </div>

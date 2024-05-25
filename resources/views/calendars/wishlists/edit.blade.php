@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'wish | create')
+@section('title', 'wish | update')
 
 @section('content')
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">@include('components.sidebar')</aside>
+    <aside class="col-auto">@include('components.sidebar')</aside>
     <article class="col-9 mt-4">
         <section class="container text-center" id="wish_new">
             <div class="col card-wrapper mt-4 mx-auto">
@@ -14,31 +14,35 @@
                     <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
                     <div class="card mt-4 py-5 px-5 border-0 shadow-sm">
-                        <form action="{{ route('calendars.home') }}" class="form text-start">
-
+                        <form method="POST" action="{{ route('calendars.wishlists.update', $wishlist) }}" class="text-start">
+                            @csrf
+                            @method('PATCH')
                             <!-- Title -->
                             <div class="COMP-form input-group border-bottom px-3 pb-2">
                                 <label for="title" class="form-label h5 fw-bold color-Letter">Title</label>
-                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" placeholder="Name..." value="new Nike shoes">
+                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" id="title" value="{{ old('title', $wishlist->title) }}" placeholder="Name...">
                             </div>
 
                             <!-- Budget -->
                             <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4">
-                                <label for="title" class="form-label h5 fw-bold color-Letter">Budget</label>
-                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="title" placeholder="0" value="35,000">
+                                <label for="budget" class="form-label h5 fw-bold color-Letter">Budget</label>
+                                <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="budget" id="budget" value="{{ old('budget', $wishlist->budget) }}" placeholder="0">
+                                <div class="h5 fw-bold color-Letter ms-2">yen</div>
                             </div>
 
                             <div class="row align-items-center mt-5 mx-0">
-
-                                <a href="{{ route('calendars.wishlists.show') }}" class="col-10 btn btn-main btn-lg px-5">
+                                <button type="submit" class="btn btn-main col-10 btn btn-main btn-lg px-5">
                                     <span class="pt-1 fw-bold">Update Wish</span>
-                                </a>
-                    
-                                <a href="" class="col-2 text-center">
-                                    <i class="fa-solid fa-trash-can color2 fa-2x"></i>
-                                </a>
+                                </button>   
                             </div>
+                        </form>
 
+                        <form method="POST" action="{{ route('calendars.wishlists.destroy', $wishlist) }}" class="text-end">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn col-2 text-center">
+                                <i class="fa-solid fa-trash-can color2 fa-2x"></i>
+                            </button>
                         </form>
 
                         

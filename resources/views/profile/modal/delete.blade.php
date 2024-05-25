@@ -9,7 +9,7 @@
             <div class="modal-body p-5 pt-3">
                 <p>Deleting your account will remove all of your information form our database. This cannot be undone.</p>
                 <div class="row justify-content-center my-4">
-                    <img src="images/pig.png" alt="Money-juu" style="width: 100px">
+                    <img src="{{ asset('images/pig.png') }}" alt="Money-juu" style="width: 100px">
                 </div>
                 <form action="#" method="post">
                     @csrf

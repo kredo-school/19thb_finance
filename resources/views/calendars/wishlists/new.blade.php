@@ -4,7 +4,7 @@
 
 @section('content')
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">@include('components.sidebar')</aside>
+    <aside class="col-auto">@include('components.sidebar')</aside>
     <article class="col-9 mt-4">
         <section class="container text-center">
             <div class="col card-wrapper mt-4 mx-auto">
@@ -14,7 +14,7 @@
                     <div class="bg-color-Rainbow mx-auto" style="width: 50px; height: 2px;"></div>
 
                     <div class="card mt-4 py-5 px-5 border-0 shadow-sm">
-                        <form method="POST" action="{{ route('calendars.wishlists.store') }}" class="form text-start">
+                        <form method="POST" action="{{ route('calendars.wishlists.store') }}" class="text-start">
                             @csrf
                             <!-- Title -->
                             <div class="COMP-form input-group border-bottom px-3 pb-2">
@@ -26,6 +26,7 @@
                             <div class="COMP-form input-group border-bottom px-3 pb-2 pt-4">
                                 <label for="budget" class="form-label h5 fw-bold color-Letter">Budget</label>
                                 <input type="text" class="font-end ms-auto ps-auto pe-0 me-0 border-0 text-end" name="budget" id="budget" placeholder="0">
+                                <div class="h5 fw-bold color-Letter ms-2">yen</div>
                             </div>
 
                             <button type="submit" class="btn btn-main btn-lg px-5 mt-5 w-100">

@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_lists', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('user_id');
-            $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        Schema::table('reports', function (Blueprint $table) {
+            $table->string('status')->nullable()->change();
         });
     }
 
@@ -26,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('item_lists');
+        Schema::table('reports', function (Blueprint $table) {
+            $table->string('status')->nullable(false)->change();
+        });
     }
 };

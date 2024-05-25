@@ -37,13 +37,13 @@
             <div class="mx-3 p-0">
                 <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
-                        <div class="col-sm-1 d-flex align-items-center p-0 faq">
+                        <div class="col-1 d-flex align-items-center p-0 faq">
                             <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
                                 <i class="fas fa-plus fa-xl color3 faq-item" data-tab="01"></i>
                             </a>
                         </div>
                         
-                        <div class="col-sm-11">
+                        <div class="col-11 pe-0">
                             <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: What devices do I need to use this app?
                             </p>
@@ -57,13 +57,13 @@
 
                 <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
-                        <div class="col-sm-1 d-flex align-items-center p-0 faq">
+                        <div class="col-1 d-flex align-items-center p-0 faq">
                             <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
                                 <i class="fas fa-plus fa-xl color3 faq-item" data-tab="02"></i>
                             </a>
                         </div>
                         
-                        <div class="col-sm-11">
+                        <div class="col-11 pe-0">
                             <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How much does it cost to use the app?
                             </p>
@@ -77,13 +77,13 @@
 
                 <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
-                        <div class="col-sm-1 d-flex align-items-center p-0 faq">
+                        <div class="col-1 d-flex align-items-center p-0 faq">
                             <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
                                 <i class="fas fa-plus fa-xl color3 faq-item" data-tab="03"></i>
                             </a>
                         </div>
                         
-                        <div class="col-sm-11">
+                        <div class="col-11 pe-0">
                             <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: How do I set budgets and categorize expenses?
                             </p>
@@ -97,13 +97,13 @@
 
                 <div class="card card-body border border-3 rounded-3 px-5 py-3 mb-2 bg-color-Background" style="max-width: 500px;">
                     <div class="row">
-                        <div class="col-sm-1 d-flex align-items-center p-0 faq">
+                        <div class="col-1 d-flex align-items-center p-0 faq">
                             <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
                                 <i class="fas fa-plus fa-xl color3 faq-item" data-tab="04"></i>
                             </a>
                         </div>
                         
-                        <div class="col-sm-11">
+                        <div class="col-11 pe-0">
                             <p class="fs-6 fw-semibold text-secondary mb-0 faq-title">
                                 Q: Is my app data backed up? What if I encounter a failure?
                             </p>

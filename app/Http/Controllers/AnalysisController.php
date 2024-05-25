@@ -2,34 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ChildCategory;
 use App\Models\ParentCategory;
-use App\Models\People;
 use App\Models\Transaction;
 use App\Models\User;
 use Carbon\Carbon;
-use GuzzleHttp\RetryMiddleware;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AnalysisController extends Controller
 {
     private $transaction;
     private $parent_category;
-    private $people;
 
-    public function __construct(Transaction $transaction, ParentCategory $parent_category, People $people)
+    public function __construct(Transaction $transaction, ParentCategory $parent_category)
     {
         $this->transaction = $transaction;
         $this->parent_category = $parent_category;
-        $this->people = $people;
     }
 
     private function totalExpenseAmount()
     {
-        $user_id = Auth::user()->id;
-
-        $totalExpenseAmount = $this->transaction->where('user_id', $user_id)
+        $totalExpenseAmount = $this->transaction->where('user_id', Auth::user()->id)
                                         ->where('transaction_type', 'expense')
                                         ->sum('amount');
 
@@ -38,9 +30,7 @@ class AnalysisController extends Controller
 
     private function totalIncomeAmount()
     {
-        $user_id = Auth::user()->id;
-
-        $totalIncomeAmount = $this->transaction->where('user_id', $user_id)
+        $totalIncomeAmount = $this->transaction->where('user_id', Auth::user()->id)
                                         ->where('transaction_type', 'income')
                                         ->sum('amount');
 

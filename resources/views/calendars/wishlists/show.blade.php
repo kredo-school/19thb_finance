@@ -4,7 +4,7 @@
 
 @section('content')
 <main class="row container mx-auto">
-    <aside class="col-auto" style="min-height: calc(100vh - 160px); background-color: #FFE4D6;">@include('components.sidebar')</aside>
+    <aside class="col-auto">@include('components.sidebar')</aside>
     <article class="col-9 mt-4">
 <section class="container text-center" id="wish">
     <div class="col card-wrapper mt-4 mx-auto">
@@ -22,7 +22,7 @@
                         <p class="h4 fw-bold">{{ $wishlist->title }}</p>
                     </div>
 
-                    <a href="{{ route('calendars.wishlists.edit') }}" class="position-absolute btn-main-reverse px-3 text-decoration-none">edit</a>
+                    <a href="{{ route('calendars.wishlists.edit', $wishlist) }}" class="position-absolute btn-main-reverse px-3 text-decoration-none">Edit</a>
                 </div>
 
                 <!-- Budget -->
@@ -33,15 +33,19 @@
                     </div>
                 </div>
 
-                <a href="" class="btn btn-main btn-lg px-5 d-flex justify-content-center align-items-center">
-                    <div class="icon-in-btn me-3">
-                        <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
-                    </div>
-                    <span class="pt-1 fw-bold">Complete</span>
-                    <div class="icon-in-btn ms-3">
-                        <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
-                    </div>
-                </a>
+                <form method="POST" action="{{ route('calendars.wishlists.destroy', $wishlist) }}">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-main btn-lg mb-5 px-5 d-flex justify-content-center align-items-center w-100">
+                        <div class="icon-in-btn me-3">
+                            <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
+                        </div>
+                        <span class="pt-1 fw-bold">Complete</span>
+                        <div class="icon-in-btn ms-3">
+                            <img src="{{ asset('images/icon_diamond.svg') }}" alt="">
+                        </div>
+                    </button>
+                </form>
                 @endforeach
                 
                 <!-- <div class="row">

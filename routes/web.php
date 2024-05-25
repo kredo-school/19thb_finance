@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditProfileController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WishlistController;
+use App\Models\Wishlist;
 use Psy\Command\EditCommand;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/new', [TransactionController::class, 'new'])->name('new');
 # Premium
 Route::post('/update-payment', [PremiumController::class, 'update'])->name('update.payment');
 Route::get('/register-premium', [PremiumController::class, 'show'])->name('register.premium');
@@ -32,6 +32,9 @@ Route::get('/privacyandterms', function () {
 });
 
 Auth::routes();
+
+Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('/learn-more', [HomeController::class, 'learnMore'])->name('learnMore');
 
 // contacts
 Route::get('/aboutUs', [AboutUsController::class, 'create'])->name('aboutUs');
@@ -61,15 +64,25 @@ Route::group(['middleware' => 'auth'], function() {
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('calendars.home');
 
+    // ItemLists
+    Route::post('/item/store', [ItemController::class, 'store'])->name('item.store');
+    Route::patch('/item/{id}/check', [ItemController::class, 'updateChecked'])->name('item.updateChecked');
+    Route::delete('/item/{id}/destroy', [ItemController::class, 'destroy'])->name('item.destroy');
+
     // Wishlists
     Route::get('/wishlists/new', [WishlistController::class, 'create'])->name('calendars.wishlists.new');
     Route::post('/wishlists/new', [WishlistController::class, 'store'])->name('calendars.wishlists.store');
     Route::get('/wishlists', [WishlistController::class, 'index'])->name('calendars.wishlists.show');
     // Route::get('/wishlists/{wishlist}', [WishlistController::class, 'show'])->name('calendars.wishlists.show');
-    Route::get('/wishlists/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
+    Route::get('/wishlists/{wishlist}/edit', [WishlistController::class, 'edit'])->name('calendars.wishlists.edit');
+    Route::patch('/wishlists/{wishlist}', [WishlistController::class, 'update'])->name('calendars.wishlists.update');
+    Route::delete('/wishlists/{wishlist}', [WishlistController::class, 'destroy'])->name('calendars.wishlists.destroy');
 
     // Transactions
-    Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
+    Route::get('/transactions/new', [TransactionController::class, 'new'])->name('entries.transactions.new');
+    Route::post('/transactions/create', [TransactionController::class, 'store'])->name('entries.transactions.store');
+    Route::get('/transactions/{transaction_id}/edit', [TransactionController::class, 'edit'])->name('entries.transactions.edit');
+    Route::patch('/transactions/{transaction_id}/update', [TransactionController::class, 'update'])->name('entries.transactions.update');
 
     // Analysis
     Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');
@@ -91,5 +104,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/people/edit/{id}', [PeopleController::class, 'getPeopleById']);
     Route::patch('people/update/{id}', [PeopleController::class, 'update'])->name('people.update');
     Route::delete('people/destroy/{id}', [PeopleController::class, 'destroy'])->name('people.destroy');
-
 });
