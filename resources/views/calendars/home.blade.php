@@ -82,9 +82,9 @@
                                         <!-- Category -->
                                         <p class="ms-2 mb-0">{{ $transaction->childCategory->name }}</p>
                                         <!-- Cost -->
-                                        <p class="{{ $transaction->transaction_type == 'expense' ? 'color2' : 'color1' }} ms-auto mb-0">
+                                        <a class="{{ $transaction->transaction_type == 'expense' ? 'color2' : 'color1' }} ms-auto mb-0" href="{{ route('entries.transactions.edit', $transaction->id) }}">
                                             {{ $transaction->transaction_type == 'expense' ? '-' : '+' }}{{ number_format(floor($transaction->amount)) }} yen
-                                        </p>
+                                        </a>
                                     </div>
                                 @endforeach
                             </div>

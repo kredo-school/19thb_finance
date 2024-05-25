@@ -79,7 +79,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::delete('/wishlists/{wishlist}', [WishlistController::class, 'destroy'])->name('calendars.wishlists.destroy');
 
     // Transactions
-    Route::get('/transactions/new', [TransactionsController::class, 'new'])->name('calendars.transactions.new');
+    Route::get('/transactions/new', [TransactionController::class, 'new'])->name('entries.transactions.new');
+    Route::post('/transactions/create', [TransactionController::class, 'store'])->name('entries.transactions.store');
+    Route::get('/transactions/{transaction_id}/edit', [TransactionController::class, 'edit'])->name('entries.transactions.edit');
+    Route::patch('/transactions/{transaction_id}/update', [TransactionController::class, 'update'])->name('entries.transactions.update');
 
     // Analysis
     Route::get('/analysis/summary', [AnalysisController::class, 'summary'])->name('analysis.summary');
