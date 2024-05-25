@@ -9,7 +9,7 @@
 </div>
 
 <div class="container py-4">
-    <div class="row justify-content-center ">
+    <div class="row justify-content-center mx-4">
         <div class="col-md-auto d-flex align-items-stretch position-relative">
             <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
                 <div class="row py-2">
