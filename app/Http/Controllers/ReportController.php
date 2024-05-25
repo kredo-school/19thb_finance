@@ -13,6 +13,7 @@ class ReportController extends Controller
 
     public function store(Request $request) {
         $validated = $request->validate([
+            'status' => 'max:20',
             'name' => 'required|max:30',
             'email' => 'required|max:30',
             'subject' => 'required|max:30',
@@ -36,11 +37,12 @@ class ReportController extends Controller
     }
 
     public function edit(Report $report) {
-        return view('contacts.edit', compact('report'));
+        return view('contacts.show', compact('report'));
     }
 
     public function update(Request $request, Report $report) {
         $validated = $request->validate([
+            'status' => 'max:20',
             'name' => 'required|max:30',
             'email' => 'required|max:30',
             'subject' => 'required|max:30',

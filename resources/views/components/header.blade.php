@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg">
 
             <!-- logo -->
-            <a class="navbar-brand" href="{{ route('welcome') }}" style="max-width: 200px;">
+            <a class="navbar-brand" href="{{ route('welcome') }}" style="max-width: 165px;">
                 <img src="{{ asset('images/pig-logo.png') }}" alt="" class="img-fluid">
             </a>
             
