@@ -94,7 +94,8 @@
                             <div class="card card-body rounded-4 my-1 px-4" style="background-color: rgba(217, 217, 217, 0.5); width: 200px;">
                                 <div class="d-flex flex-row">
                                     <img src="{{ asset('images/account-icon.png') }}" alt="account_icon" style="max-width: 30px;" class="py-2">
-                                {{--  <a href="{{ route('profile.edit') }}" class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</> --}}
+                                    {{-- <p class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</p> --}}
+                                    <a href="{{ route('profile.edit') }}" class="h4 text-white mx-3 my-2" style="text-shadow: 1px 1px 2px #343A40">Account</a>
                                 </div>
     
                                 <div class="d-flex">

@@ -8,8 +8,8 @@
     <p id="premium-p" class="position-absolute top-50 start-50 translate-middle">premium</p>
 </div>
 
-<div class="container py-4">
-    <div class="row justify-content-center ">
+<div class="container p-4">
+    <div class="row justify-content-center mt-5">
         <div class="col-md-auto d-flex align-items-stretch position-relative">
             <div class="col-md-auto position-absolute" style="left:-250px; height:100%">
                 <div class="row py-2">
@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="row position-absolute end-0 px-4" style="bottom:0">
-                    <img src="images/pinky_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 150px">
+                    <img src="images/pinky_pig.png" alt="pink_pig" class="opacity-75" style="max-width: 125px">
                 </div>
             </div>
             <form method="POST" action="{{ route('update.payment') }}"  enctype="multipart/form-data">
